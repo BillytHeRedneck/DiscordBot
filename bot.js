@@ -12,9 +12,7 @@ client.on('message', message => {
 
     if(message.content.startsWith("!Eric")){
         message.channel.send({files: ["/Users/billytheredneck/Documents/Other/Discord Gif/Eric Andre Unimpressed.gif"]})
-    }  else if(message.content.startsWith("!Yesss")) {
-        message.channel.send({files: ["/Users/billytheredneck/Documents/Other/Discord Gif/Yesss.gif"]})
-    }
+    }  
 })
 
 client.login(token);
