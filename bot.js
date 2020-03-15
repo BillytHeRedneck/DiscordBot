@@ -11,7 +11,7 @@ client.on('message', message => {
     //console.log(message.content);
 
     if(message.content.startsWith("!Eric")){
-        message.channel.send({files : ["Eric Andre Unimpressed.gif"]})
+        message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     }  
 })
 
