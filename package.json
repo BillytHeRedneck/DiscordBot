@@ -1,0 +1,23 @@
+{
+  "name": "Test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillytHeRedneck/Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BillytHeRedneck/Test/issues"
+  },
+  "homepage": "https://github.com/BillytHeRedneck/Test#readme",
+  "dependencies": {
+    "discord.js": "^12.0.2"
+  }
+}
