@@ -9,18 +9,19 @@ client.once('ready', () => {
 
 client.on('message', message => {
     //console.log(message.content);
-
+    try {
     if(message.content.startsWith("!Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     } else if(message.content.startsWith("!Yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
     } else if(message.content.startsWith("!EnjoyThat")){
-        message.channel.send({files : ["./Images/EnjoyThat.gif"]})
+        message.channel.send({files : ["./Images/EnjoyThat"]})
     } else if(message.content.startsWith("!CatchHands")){
         message.channel.send({files : ["./Images/CatchHands.gif"]})
     } else if(message.content.startsWith("!NOOICE")){
         message.channel.send({files : ["./Images/NOOICE.gif"]})
     } 
+} catch()
 })
 
 client.login(token);
