@@ -13,6 +13,6 @@ client.on('message', message => {
     if(message.content.startsWith("!Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     }  
-})
+}).listen(process.env.PORT || 5000)
 
 client.login("Njg4ODQ3ODUwNDY5NDU3OTUy.Xm6TsQ.3kN2pwav_duuU6I-gNz51y6JITQ");
