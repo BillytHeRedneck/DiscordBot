@@ -24,4 +24,4 @@ client.on('message', message => {
  
 })
 
-client.login('te20x0czKwn7wYZ_ewXevb5xeDNRuvRm');
+client.login(token);
