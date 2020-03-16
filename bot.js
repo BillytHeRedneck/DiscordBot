@@ -67,6 +67,27 @@ client.on('message', message => {
     } else if(message.content.startsWith(prefix + "HighestFive")){
         message.channel.send({files : ["./Images/Highest of Fives.gif"]})
    
+    } else if(message.content.startsWith(prefix + "BigShaqNo")){
+        message.channel.send({files : ["./Images/Big Shaq No.gif"]})
+   
+    } else if(message.content.startsWith(prefix + "BigShaqOk")){
+        message.channel.send({files : ["./Images/Big Shaq Ok.gif"]})
+   
+    } else if(message.content.startsWith(prefix + "GarretSMH")){
+        message.channel.send({files : ["./Images/Garret Shake Head.gif"]})
+   
+    } else if(message.content.startsWith(prefix + "Amazing...")){
+        message.channel.send({files : ["./Images/Squidward Amazing.gif"]})
+   
+    } else if(message.content.startsWith(prefix + "Sweating")){
+        message.channel.send({files : ["./Images/Sweating.gif"]})
+   
+    } else if(message.content.startsWith(prefix + "T1Unimpressed")){
+        message.channel.send({files : ["./Images/Tyler1 Unimpressed.gif"]})
+   
+    } else if(message.content.startsWith(prefix + "Yeah...no")){
+        message.channel.send({files : ["./Images/Yeah...no.gif"]})
+   
     }
  
 })
