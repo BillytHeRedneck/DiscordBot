@@ -16,11 +16,11 @@ client.on('message', message => {
         message.channel.send({files : ["./Images/Yesss.gif"]})
     } else if(message.content.startsWith("!EnjoyThat")){
         message.channel.send({files : ["./Images/EnjoyThat.gif"]})
-    } else if(message.content.startsWith("!CatchHands")){
-        message.channel.send({files : ["./Images/CatchHands.gif"]})
     } else if(message.content.startsWith("!NOOICE")){
         message.channel.send({files : ["./Images/NOOICE.gif"]})
-    } 
+    } else if(message.content.startsWith("!CatchHands")){
+        message.channel.send({files : ["./Images/CatchHands.gif"]})
+    }  
  
 })
 
