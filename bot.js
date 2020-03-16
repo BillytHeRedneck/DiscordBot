@@ -5,7 +5,7 @@ const canvas = canvas.createCanvas(700, 250);
 //const canvas = Canvas.createCanvas(700, 250);
 
 client.login(token);
-
+const canvas = canvas.createCanvas(700, 250);
 client.once('ready', () => { 
     console.log('Bot is logged in!')
 })
