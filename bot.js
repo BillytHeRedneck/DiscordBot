@@ -14,7 +14,9 @@ client.on('message', message => {
 
     if(message.content.startsWith("!Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
-    }  
+    }  else {
+        message.channel.send("Oops")
+    }
 })
 
 client.login(process.env.token);
