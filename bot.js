@@ -14,16 +14,21 @@ client.on('message', message => {
     }
 
     //WHERE GIF CODE GOES
-    if(message.content.startsWith("!Eric")){
+    if(message.content.startsWith(prefix + "Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
-    } else if(message.content.startsWith("!Yesss")){
+    
+    } else if(message.content.startsWith(prefix + "Yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
-    } else if(message.content.startsWith("!EnjoyThat")){
+    
+    } else if(message.content.startsWith(prefix + "EnjoyThat")){
         message.channel.send({files : ["./Images/EnjoyThat.gif"]})
-    } else if(message.content.startsWith("!NOOICE")){
+    
+    } else if(message.content.startsWith(prefix + "NOOICE")){
         message.channel.send({files : ["./Images/NOOICE.gif"]})
-    } else if(message.content.startsWith("!CatchHands")){
+    
+    } else if(message.content.startsWith(prefix + "CatchHands")){
         message.channel.send({files : ["./Images/CatchHands.gif"]})
+   
     }  
  
 })
