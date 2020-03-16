@@ -7,6 +7,11 @@ client.once('ready', () => {
     console.log('Bot is logged in!')
 })
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
+
 client.on('message', message => {
     //console.log(message.content);
 
