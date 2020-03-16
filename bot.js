@@ -20,9 +20,7 @@ client.on('message', message => {
         message.channel.send({files : ["./Images/CatchHands.gif"]})
     } else if(message.content.startsWith("!NOOICE")){
         message.channel.send({files : ["./Images/NOOICE.gif"]})
-    } else {
-        message.channel.send("Thats not a valid command boi")
-    }
+    } 
 })
 
 client.login(token);
