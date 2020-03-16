@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const{ prefix, token } = require ('./config.json');
 const client = new Discord.Client();
+const canvas = canvas.createCanvas(700, 250);
 //const canvas = Canvas.createCanvas(700, 250);
 
 client.login(token);
