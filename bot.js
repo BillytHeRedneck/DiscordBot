@@ -20,9 +20,7 @@ client.on('message', message => {
         message.channel.send({files : ["./Images/CatchHands.gif"]})
     } else if(message.content.startsWith("!NOOICE")){
         message.channel.send({files : ["./Images/NOOICE.gif"]})
-    } else {
-        message.channel.send("That's not a GIF boi")
-    }
+    } 
  
 })
 
