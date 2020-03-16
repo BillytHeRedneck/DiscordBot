@@ -15,7 +15,7 @@ client.on('message', message => {
     } 
 })
 
-client.login('token');
+client.login(token);
 /*
 const Discord = require('discord.js');
 const{ prefix, token } = require ('./config.json');
