@@ -13,8 +13,8 @@ client.on('message', message => {
     //!Help CODE
     if(message.content.startsWith(prefix + "Help")) {
         message.channel.send("I am here to help you. Start with my prefix '!', and here are my commands: " + '\n')
-        message.channel.send("Eric" + '\t')
-        message.channel.send("Yesss" + '\t')
+        message.channel.send("Eric" + '\b')
+        message.channel.send("Yesss" + '\b')
 
     //WHERE GIF CODE GOES
     } else if(message.content.startsWith(prefix + "Eric")){
