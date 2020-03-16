@@ -4,7 +4,7 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "npm start -Dserver.port=$PORT"
   },
   "repository": {
     "type": "git",
