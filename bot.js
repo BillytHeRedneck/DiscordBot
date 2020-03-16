@@ -46,7 +46,7 @@ client.on('message', message => {
     } else if(message.content.startsWith(prefix + "YES")){
         message.channel.send({files : ["./Images/M Bison Yes! Yes!.gif"]})
    
-    } else if(message.content.startsWith(prefix + "")){
+    } else if(message.content.startsWith(prefix + "NiceComp")){
         message.channel.send({files : ["./Images/Nice Competetion.gif"]})
    
     } else if(message.content.startsWith(prefix + "Tea")){
