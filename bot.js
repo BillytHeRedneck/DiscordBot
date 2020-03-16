@@ -10,7 +10,9 @@ client.once('ready', () => {
 client.on('message', message => {
     //WHERE HELP CODE GOES
     if(message.content.startsWith(prefix + "Help")) {
-        message.channel.send("I am here to help you")
+        message.channel.send("I am here to help you. Here are my commands:" + '\n')
+        message.channel.send("!Eric" + '\n')
+        message.channel.send("!Yesss" + '\n')
     }
 
     //WHERE GIF CODE GOES
