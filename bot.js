@@ -1,18 +1,11 @@
 const Discord = require('discord.js');
-const config = require('./config.json');
 const client = new Discord.Client();
 
 client.once('ready', () => {
 	console.log('Ready!');
 });
 
-client.on('message', message => {
-	if (message.content === '!ping') {
-		message.channel.send('Pong.');
-	}
-});
-
-client.login(config.token)
+client.login('Njg4ODQ3ODUwNDY5NDU3OTUy.Xm6TsQ.3kN2pwav_duuU6I-gNz51y6JITQ');
 /*
 const Discord = require('discord.js');
 const{ prefix, token } = require ('./config.json');
