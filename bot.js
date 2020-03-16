@@ -8,8 +8,12 @@ client.once('ready', () => {
 })
 
 client.on('message', message => {
-    //console.log(message.content);
-    
+    //WHERE HELP CODE GOES
+    if(message.content.startsWith(prefix + "Help")) {
+        message.channel.send("I am here to help you")
+    }
+
+    //WHERE GIF CODE GOES
     if(message.content.startsWith("!Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     } else if(message.content.startsWith("!Yesss")){
