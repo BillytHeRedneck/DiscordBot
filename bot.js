@@ -48,7 +48,7 @@ client.on('message', async message => {
 	}
 });
 
-client.login('your-token-goes-here');
+client.login('Njg4ODQ3ODUwNDY5NDU3OTUy.Xm6TsQ.3kN2pwav_duuU6I-gNz51y6JITQ');
 /*
 const Discord = require('discord.js');
 const{ prefix, token } = require ('./config.json');
