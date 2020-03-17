@@ -9,7 +9,6 @@ client.once('ready', () => {
 client.on('message', message=> {
     
     msg = message.content.toLowerCase()
-    message.channel.send("prefix2 is" + prefix2);
     //!Help CODE
     if(msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
