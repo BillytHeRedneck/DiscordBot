@@ -96,6 +96,7 @@ client.on('message', message=> {
     } else if(msg.startsWith(prefix2+ "wrong")){
         message.channel.send({files : ["./Audio/Wrong.mp4"]})
     
+    }
     //OTHER
     
  
