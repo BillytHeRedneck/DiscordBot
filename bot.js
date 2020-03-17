@@ -10,9 +10,7 @@ client.once('ready', () => {
 client.on('message', message=> {
     
     msg = message.content.toLowerCase()
-    if (message.author.id == self.user.id){
-        return
-    } 
+    if (message.author.bot) return; 
     
         //Help
     else if(msg.startsWith(prefix + "help")) {
