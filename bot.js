@@ -19,6 +19,9 @@ client.on('message', message=> {
     } else if(msg.startsWith(prefix + "eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     
+    } else if(msg.startsWith(prefix + "bruhh")){
+        message.channel.send({files : ["./Audio/Bruh-Sound-Effect-_2.wma"]})
+    
     } else if(msg.startsWith(prefix + "yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
     
