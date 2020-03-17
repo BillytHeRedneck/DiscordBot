@@ -23,7 +23,7 @@ client.on('message', message=> {
     } else if(msg.content.startsWith(prefix + "Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     
-    } else if(message.content.startsWith(prefix + "Yesss")){
+    } /*else if(message.content.startsWith(prefix + "Yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
     
     } else if(message.content.startsWith(prefix + "EnjoyThat")){
@@ -93,7 +93,7 @@ client.on('message', message=> {
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
    
     }
- 
+ */
 })
 
 client.login(token);
