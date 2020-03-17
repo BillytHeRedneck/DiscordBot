@@ -12,15 +12,15 @@ client.on('message', message=> {
     msg = message.content.toLowerCase()
 
     //!Help CODE
-    if(message.content.startsWith(prefix + "Help")) {
+    if(msg.startsWith(prefix + "Help")) {
         message.channel.send("Refer to gif-commands for my commands")
         
 
     //WHERE GIF CODE GOES
-    } else if(msg.content.startsWith(prefix + "eric")){
+    } else if(msg.startsWith(prefix + "eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     
-    } else if(msg.content.startsWith(prefix + "Eric")){
+    } else if(msg.startsWith(prefix + "Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     
     } /*else if(message.content.startsWith(prefix + "Yesss")){
