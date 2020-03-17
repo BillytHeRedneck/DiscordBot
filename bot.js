@@ -98,10 +98,7 @@ client.on('message', message=> {
     
     //OTHER
     } else if (prefix + "ht") {
-        string; mes = msg;
         message.channel.send("hi")
-        message.channel.send(mes)
-
     }
  
 })
