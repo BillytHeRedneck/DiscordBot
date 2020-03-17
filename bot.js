@@ -23,77 +23,77 @@ client.on('message', message=> {
     } else if(msg.startsWith(prefix + "Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     
-    } /*else if(message.content.startsWith(prefix + "Yesss")){
+    } else if(msg.startsWith(prefix + "Yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
     
-    } else if(message.content.startsWith(prefix + "EnjoyThat")){
+    } else if(msg.startsWith(prefix + "EnjoyThat")){
         message.channel.send({files : ["./Images/EnjoyThat.gif"]})
     
-    } else if(message.content.startsWith(prefix + "NOOICE")){
+    } else if(msg.startsWith(prefix + "NOOICE")){
         message.channel.send({files : ["./Images/NOOICE.gif"]})
     
-    } else if(message.content.startsWith(prefix + "ORA")){
+    } else if(msg.startsWith(prefix + "ORA")){
         message.channel.send({files : ["./Images/CatchHands.gif"]})
    
-    } else if(message.content.startsWith(prefix + "Wrong")){
+    } else if(msg.startsWith(prefix + "Wrong")){
         message.channel.send({files : ["./Images/Wrong.gif"]})
    
-    } else if(message.content.startsWith(prefix + "Fistbump")){
+    } else if(msg.startsWith(prefix + "Fistbump")){
         message.channel.send({files : ["./Images/Fa-la-la-la-la.gif"]})
    
-    } else if(message.content.startsWith(prefix + "IDK")){
+    } else if(msg.startsWith(prefix + "IDK")){
         message.channel.send({files : ["./Images/IDK.gif"]})
    
-    } else if(message.content.startsWith(prefix + "LBLaugh")){
+    } else if(msg.startsWith(prefix + "LBLaugh")){
         message.channel.send({files : ["./Images/Long Beach Laugh.gif"]})
    
-    } else if(message.content.startsWith(prefix + "YESYES")){
+    } else if(msg.startsWith(prefix + "YESYES")){
         message.channel.send({files : ["./Images/M Bison Yes! Yes!.gif"]})
    
-    } else if(message.content.startsWith(prefix + "SpedComp")){
+    } else if(msg.startsWith(prefix + "SpedComp")){
         message.channel.send({files : ["./Images/Nice Competetion.gif"]})
    
-    } else if(message.content.startsWith(prefix + "Tea")){
+    } else if(msg.startsWith(prefix + "Tea")){
         message.channel.send({files : ["./Images/The Tea.gif"]})
    
-    } else if(message.content.startsWith(prefix + "Window")){
+    } else if(msg.startsWith(prefix + "Window")){
         message.channel.send({files : ["./Images/Throw You Out The Window.gif"]})
    
-    } else if(message.content.startsWith(prefix + "WhatHeSay")){
+    } else if(msg.startsWith(prefix + "WhatHeSay")){
         message.channel.send({files : ["./Images/What Did He Just Say.gif"]})
    
-    } else if(message.content.startsWith(prefix + "NeverWin")){
+    } else if(msg.startsWith(prefix + "NeverWin")){
         message.channel.send({files : ["./Images/You Never Win.gif"]})
    
-    } else if(message.content.startsWith(prefix + "HurtMyEar")){
+    } else if(msg.startsWith(prefix + "HurtMyEar")){
         message.channel.send({files : ["./Images/You're Hurting My Ear.gif"]})
    
-    } else if(message.content.startsWith(prefix + "HighestFive")){
+    } else if(msg.startsWith(prefix + "HighestFive")){
         message.channel.send({files : ["./Images/Highest of Fives.gif"]})
    
-    } else if(message.content.startsWith(prefix + "BigShaqNo")){
+    } else if(msg.startsWith(prefix + "BigShaqNo")){
         message.channel.send({files : ["./Images/Big Shaq No.gif"]})
    
-    } else if(message.content.startsWith(prefix + "BigShaqOk")){
+    } else if(msg.startsWith(prefix + "BigShaqOk")){
         message.channel.send({files : ["./Images/Big Shaq Ok.gif"]})
    
-    } else if(message.content.startsWith(prefix + "GarretSMH")){
+    } else if(msg.startsWith(prefix + "GarretSMH")){
         message.channel.send({files : ["./Images/Garret Shake Head.gif"]})
    
-    } else if(message.content.startsWith(prefix + "Amazing...")){
+    } else if(msg.startsWith(prefix + "Amazing...")){
         message.channel.send({files : ["./Images/Squidward Amazing.gif"]})
    
-    } else if(message.content.startsWith(prefix + "Sweating")){
+    } else if(msg.startsWith(prefix + "Sweating")){
         message.channel.send({files : ["./Images/Sweating.gif"]})
    
-    } else if(message.content.startsWith(prefix + "T1Cringe")){
+    } else if(msg.startsWith(prefix + "T1Cringe")){
         message.channel.send({files : ["./Images/Tyler1 Unimpressed.gif"]})
    
-    } else if(message.content.startsWith(prefix + "DevilNo")){
+    } else if(msg.startsWith(prefix + "DevilNo")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
    
     }
- */
+ 
 })
 
 client.login(token);
