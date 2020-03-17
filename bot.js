@@ -10,8 +10,12 @@ client.once('ready', () => {
 client.on('message', message=> {
     
     msg = message.content.toLowerCase()
-    //Help
-    if(msg.startsWith(prefix + "help")) {
+    if (message.author.id == self.user.id){
+        return
+    } 
+    
+        //Help
+    else if(msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
         
 
@@ -97,7 +101,6 @@ client.on('message', message=> {
         message.channel.send({files : ["./Audio/Wrong.mp4"]})
         let mes = "HELLO"
         message.channel.send(mes.Chars(3))
-        break
     }
     //OTHER
     
