@@ -17,7 +17,7 @@ client.on('message', message => {
         
 
     //WHERE GIF CODE GOES
-    } else if(message.content.startsWith(prefix + "Eric")){
+    } else if(message.content.startsWith(prefix + "eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     
     } else if(message.content.startsWith(prefix + "Yesss")){
