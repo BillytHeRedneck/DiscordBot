@@ -97,9 +97,7 @@ client.on('message', message=> {
         message.channel.send({files : ["./Audio/Wrong.mp4"]})
     
     //OTHER
-    } else if (prefix + "ht") {
-        message.channel.send("hi")
-    }
+    
  
 })
 
