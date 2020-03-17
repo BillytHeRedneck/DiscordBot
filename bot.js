@@ -3,13 +3,13 @@ var bot = new Discord.Client();
 var isReady = true;
 
 bot.on('message', message => {
-  if (isReady && message.content === 'Gotcha Bitch')
+  if (isReady && message.content === 'bruh')
   {
   isReady = false;
   var voiceChannel = message.member.voiceChannel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.playFile('./Audio/gab.mp3');
+     const dispatcher = connection.playFile('./Audio/Bruh Sound Effect #2.mp3');
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
