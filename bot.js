@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const{ prefix, token } = require ('./config.json');
+const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
 
 client.once('ready', () => { 
@@ -88,8 +88,11 @@ client.on('message', message=> {
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
    
-    }  else if(msg.startsWith(prefix + "campus")){
+    } else if(msg.startsWith(prefix2 + "campus")){
         message.channel.send({files : ["./Audio/When they find out who Christopher Columbus really was.mp4"]})
+    
+    } else if(msg.startsWith(prefix2 + "wrong")){
+        message.channel.send({files : ["./Audio/Wrong.mp4"]})
     
     }
  
