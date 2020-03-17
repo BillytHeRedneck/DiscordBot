@@ -88,10 +88,10 @@ client.on('message', message=> {
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
    
-    } else if(msg.startsWith(prefix2 + "campus")){
+    } else if(msg.startsWith("$campus")){
         message.channel.send({files : ["./Audio/When they find out who Christopher Columbus really was.mp4"]})
     
-    } else if(msg.startsWith(prefix2 + "wrong")){
+    } else if(msg.startsWith("$wrong")){
         message.channel.send({files : ["./Audio/Wrong.mp4"]})
     
     }
