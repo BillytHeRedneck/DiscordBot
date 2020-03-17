@@ -28,13 +28,13 @@ client.on('message', message => {
     } else if(message.content.startsWith(prefix + "NOOICE")){
         message.channel.send({files : ["./Images/NOOICE.gif"]})
     
-    } else if(message.content.startsWith(prefix + "CatchHands")){
+    } else if(message.content.startsWith(prefix + "ORA")){
         message.channel.send({files : ["./Images/CatchHands.gif"]})
    
     } else if(message.content.startsWith(prefix + "Wrong")){
         message.channel.send({files : ["./Images/Wrong.gif"]})
    
-    } else if(message.content.startsWith(prefix + "BaymaxFist")){
+    } else if(message.content.startsWith(prefix + "Fistbump")){
         message.channel.send({files : ["./Images/Fa-la-la-la-la.gif"]})
    
     } else if(message.content.startsWith(prefix + "IDK")){
@@ -43,10 +43,10 @@ client.on('message', message => {
     } else if(message.content.startsWith(prefix + "LBLaugh")){
         message.channel.send({files : ["./Images/Long Beach Laugh.gif"]})
    
-    } else if(message.content.startsWith(prefix + "YES")){
+    } else if(message.content.startsWith(prefix + "YESYES")){
         message.channel.send({files : ["./Images/M Bison Yes! Yes!.gif"]})
    
-    } else if(message.content.startsWith(prefix + "NiceComp")){
+    } else if(message.content.startsWith(prefix + "SpedComp")){
         message.channel.send({files : ["./Images/Nice Competetion.gif"]})
    
     } else if(message.content.startsWith(prefix + "Tea")){
@@ -82,10 +82,10 @@ client.on('message', message => {
     } else if(message.content.startsWith(prefix + "Sweating")){
         message.channel.send({files : ["./Images/Sweating.gif"]})
    
-    } else if(message.content.startsWith(prefix + "T1Unimpressed")){
+    } else if(message.content.startsWith(prefix + "T1Cringe")){
         message.channel.send({files : ["./Images/Tyler1 Unimpressed.gif"]})
    
-    } else if(message.content.startsWith(prefix + "Yeah...no")){
+    } else if(message.content.startsWith(prefix + "DevilNo")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
    
     }
