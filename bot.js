@@ -12,7 +12,7 @@ client.on('message', message=> {
     msg = message.content.toLowerCase()
 
     //!Help CODE
-    if(msg.startsWith(prefix + "Help")) {
+    if(msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new missions available at the gif-command Bounty-board!")
         
 
