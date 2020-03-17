@@ -1,4 +1,26 @@
+var Discord = require('discord.js');
+var bot = new Discord.Client();
+var isReady = true;
 
+bot.on('message', message => {
+  if (isReady && message.content === 'Gotcha Bitch')
+  {
+  isReady = false;
+  var voiceChannel = message.member.voiceChannel;
+  voiceChannel.join().then(connection =>
+  {
+     const dispatcher = connection.playFile('./Audio/gab.mp3');
+     dispatcher.on("end", end => {
+       voiceChannel.leave();
+       });
+   }).catch(err => console.log(err));
+   isReady = true;
+  }
+});
+
+bot.login('Njg4ODQ3ODUwNDY5NDU3OTUy.Xm6TsQ.3kN2pwav_duuU6I-gNz51y6JITQ');
+
+/*
 const Discord = require('discord.js');
 const{ prefix, token } = require ('./config.json');
 const client = new Discord.Client();
@@ -19,9 +41,6 @@ client.on('message', message=> {
     //WHERE GIF CODE GOES
     } else if(msg.startsWith(prefix + "eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
-    
-    } else if(msg.startsWith(prefix + "bruh")){
-        message.channel.send({files : ["./Audio/Bruh Sound Effect #2.mp3"]})
     
     } else if(msg.startsWith(prefix + "yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
@@ -97,3 +116,4 @@ client.on('message', message=> {
 })
 
 client.login(token);
+*/
