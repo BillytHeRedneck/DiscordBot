@@ -8,7 +8,8 @@ client.once('ready', () => {
 })
 
 client.on('message', message => {
-   
+    
+    message = message.Text.toLower()
 
     //!Help CODE
     if(message.content.startsWith(prefix + "Help")) {
