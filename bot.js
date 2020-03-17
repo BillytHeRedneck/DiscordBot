@@ -9,7 +9,7 @@ client.once('ready', () => {
 
 client.on('message', message=> {
     
-    
+    message = message.content.toLowerCase()
 
     //!Help CODE
     if(message.content.startsWith(prefix + "Help")) {
@@ -18,6 +18,9 @@ client.on('message', message=> {
 
     //WHERE GIF CODE GOES
     } else if(message.content.startsWith(prefix + "eric")){
+        message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
+    
+    } else if(message.content.startsWith(prefix + "Eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
     
     } else if(message.content.startsWith(prefix + "Yesss")){
