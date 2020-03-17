@@ -12,7 +12,7 @@ client.on('message', message=> {
 
     //!Help CODE
     if(msg.startsWith(prefix + "help")) {
-        message.channel.send("Greetings Traveller! There are new missions available at the gif-command Bounty-board!")
+        message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
         
 
     //WHERE GIF CODE GOES
