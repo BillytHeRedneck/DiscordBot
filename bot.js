@@ -7,9 +7,9 @@ client.once('ready', () => {
     console.log('Bot is logged in!')
 })
 
-client.on('message', message => {
+client.on('message', message=> {
     
-    message = message.Text.toLower()
+    
 
     //!Help CODE
     if(message.content.startsWith(prefix + "Help")) {
