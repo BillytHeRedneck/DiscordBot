@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
+const ms = require("ms");
 
 
 client.once('ready', () => { 
@@ -110,13 +111,13 @@ client.on('message', message=> {
         var counter = 0;
         if (willIWork == 0){
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot")
-            var mute = "!mute @CLAP-TP 1 min";
+            var mute = "!mute @CLAP-TP 20s";
             message.channel.send(mute)
             let args1 = mute.slice(prefix.length).split(" ");
  
             switch (args1[0]) {
                 case 'mute':
-                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
+                    var person  = "@CL4P-TP";
                     if(!person) return  message.reply("I CANT FIND THE USER " + person)
         
                     
