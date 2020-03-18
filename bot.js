@@ -89,36 +89,36 @@ client.on('message', message=> {
    
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
-   
-
-    //AUDIO
-    } else if(msg.startsWith(prefix2 + "campus")){
-        message.channel.send({files : ["./Audio/When they find out who Christopher Columbus really was.mp4"]})
-    
-    } else if(msg.startsWith(prefix2+ "wrong")){
-        message.channel.send({files : ["./Audio/Wrong.mp4"]})
-        
-
     
     //OTHER
     } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
-        message.channel.send("Your random number is... Rrrrrgh...this isn't working!:     " + Math.floor(Math.random() * Math.floor(num)))
+        var willIWork = Math.floor(Math.random() * Math.floor(2));
+        if (willIWork == 0){
+            message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working!")
+        } else {
+            message.channel.send("Your random number is... " + Math.floor(Math.random() * Math.floor(num)))
+        }
+        
         
 
     } else if (msg.startsWith(prefix +"ht")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
-        for (var i = 1; i <= num; i++){
-            var rand = Math.floor(Math.random() * Math.floor(2));
-            if (rand == 0){
-                message.channel.send("Flip number " + i + " is:     Heads")
-            } else {
-                message.channel.send("Flip number " + i + " is:     Tails")
-            }
+        var willIWork = Math.floor(Math.random() * Math.floor(2));
+        if (willIWork == 0){
+            message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working!")
+        } else {
+            for (var i = 1; i <= num; i++){
+                var rand = Math.floor(Math.random() * Math.floor(2));
+                if (rand == 0){
+                    message.channel.send("Flip number " + i + " is:     Heads")
+                } else {
+                    message.channel.send("Flip number " + i + " is:     Tails")
+                }
+            }   
         }
-
     } 
  
 })
