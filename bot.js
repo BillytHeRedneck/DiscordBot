@@ -97,11 +97,18 @@ client.on('message', message=> {
     
     } else if(msg.startsWith(prefix2+ "wrong")){
         message.channel.send({files : ["./Audio/Wrong.mp4"]})
-        let mes = "HELLO"
-        message.channel.send(mes.Chars(3))
-    }
-    //OTHER
+        
+
     
+    //OTHER
+    } else if (msg.startsWith(prefix +"ht")){
+        let mes = msg.splitMessage(3)
+        switch (mes){
+            case "1":
+                message.channel.send("Heads")
+                break
+        }
+    }
  
 })
 
