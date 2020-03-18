@@ -119,7 +119,8 @@ client.on('message', message=> {
                     }
                     }
             }
-            sleep(10000)             
+            sleep(10000) 
+            message.channel.send("Rebooted")            
         } else {
             for (var i = 1; i <= num; i++){
                 var rand = Math.floor(Math.random() * Math.floor(2));
