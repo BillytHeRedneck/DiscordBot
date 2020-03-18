@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
-const ms = require("ms");
+const colours = require("../colours.json");
+const superagent = require("superagent");
 
 
 client.once('ready', () => { 
@@ -111,45 +112,7 @@ client.on('message', message=> {
         var counter = 0;
         if (willIWork == 0){
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot")
-            var mute = "!mute @CLAP-TP 20s";
-            message.channel.send(mute)
-            let args1 = mute.slice(prefix.length).split(" ");
- 
-            switch (args1[0]) {
-                case 'mute':
-                    var person  = "@CL4P-TP";
-                    if(!person) return  message.reply("I CANT FIND THE USER " + person)
-        
-                    
-                    let role = message.guild.roles.find(role => role.name === "mute");
-                
-        
-                    if(!role) return message.reply("Couldn't find the mute role.")
-        
-        
-                    let time = args[2];
-                    if(!time){
-                        return message.reply("You didnt specify a time!");
-                    }
-        
-                    
-                    person.addRole(role.id);
-        
-        
-                    message.channel.send(`@${person.user.tag} has now been muted for ${ms(ms(time))}`)
-        
-                    setTimeout(function(){
-                    
-                        
-                        person.removeRole(role.id);
-                        console.log(role.id)
-                        message.channel.send(`@${person.user.tag} has been unmuted.`)
-                    }, ms(time));
-        
-        
-        
-                break;
-            }
+            
                     
          
         } else {
@@ -172,8 +135,79 @@ client.on('message', message=> {
 
             }
         }
-    } 
+    } else if (msg.startsWith(prefix+"mute")) {
+        let messageArray = message.content.split(" ")
+        let args1 = messageArray.slice(1);
+        module.exports.run = async (client, message, args1) => {
+            // check if the command caller has permission to use the command
+            if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send("You dont have permission to use this command.");
+            
+            if(!message.guild.me.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"])) return message.channel.send("I don't have permission to add roles!")
+            
+            //define the reason and mutee
+            let mutee = message.mentions.members.first() || message.guild.members.get(args[0]);
+            if(!mutee) return message.channel.send("Please supply a user to be muted!");
+            
+            let reason = args1.slice(1).join(" ");
+            if(!reason) reason = "No reason given"
+            
+            //define mute role and if the mute role doesnt exist then create one
+            let muterole = message.guild.roles.find(r => r.name === "Muted")
+            if(!muterole) {
+                try{
+                    muterole = await message.guild.createRole({
+                        name: "Muted",
+                        color: "#514f48",
+                        permissions: []
+                    })
+                    message.guild.channels.forEach(async (channel, id) => {
+                        await channel.overwritePermissions(muterole, {
+                            SEND_MESSAGES: false,
+                            ADD_REACTIONS: false,
+                            SEND_TTS_MESSAGES: false,
+                            ATTACH_FILES: false,
+                            SPEAK: false
+                        })
+                    })
+                } catch(e) {
+                    console.log(e.stack);
+                }
+            }
+        
+            
+            //add role to the mentioned user and also send the user a dm explaing where and why they were muted
+            mutee.addRole(muterole.id).then(() => {
+                message.delete()
+                mutee.send(`Hello, you have been in ${message.guild.name} for: ${reason}`).catch(err => console.log(err))
+                message.channel.send(`${mutee.user.username} was successfully muted.`)
+            })
+            
+            //send an embed to the modlogs channel
+            let embed = new Discord.RichEmbed()
+            .setColor(colours.redlight)
+            .setAuthor(`${message.guild.name} Modlogs`, message.guild.iconURL)
+            .addField("Moderation:", "mute")
+            .addField("Mutee:", mutee.user.username)
+            .addField("Moderator:", message.author.username)
+            .addField("Reason:", reason)
+            .addField("Date:", message.createdAt.toLocaleString())
+            
+            let sChannel = message.guild.channels.find(c => c.name === "tut-modlogs")
+            sChannel.send(embed)
+            }
+            
+            module.exports.config = {
+                name: "mute",
+                description: "Mutes a member in the discord!",
+                usage: "!mute <user> <reason>",
+                accessableby: "Members",
+                aliases: ["m", "nospeak"]
+            }
+    }
  
 })
 
 client.login(token);
+
+
+    
