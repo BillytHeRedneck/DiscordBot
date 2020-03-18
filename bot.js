@@ -102,12 +102,9 @@ client.on('message', message=> {
     
     //OTHER
     } else if (msg.startsWith(prefix +"ht")){
-        let mes = msg.splitMessage(3)
-        switch (mes){
-            case "1":
-                message.channel.send("Heads")
-                break
-        }
+        const args = message.content.split('');
+        const number = args.shift(3)
+        message.channel.send(number)
     }
  
 })
