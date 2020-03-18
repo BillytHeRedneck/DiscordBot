@@ -118,7 +118,7 @@ client.on('message', message=> {
             setTimeout(function(){
                 //this.addRole(mainrole.id)
                 this.removeRole(role.id);
-                message.channel.send("Rebooted")
+                message.channel.send("Rebooted!")
             }, 10000);
             
         } else {
