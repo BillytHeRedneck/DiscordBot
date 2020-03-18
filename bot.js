@@ -101,10 +101,10 @@ client.on('message', message=> {
 
     
     //OTHER
-    } else if (msg.startsWith(prefix +"ht")) {
+    } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
-        message.channel.send(Math.floor(Math.random() * Math.floor(num)))
+        message.channel.send("Your random number is... Rrrrrgh...this isn't working!:" + Math.floor(Math.random() * Math.floor(num)))
         
 
     }
