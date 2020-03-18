@@ -112,7 +112,7 @@ client.on('message', message=> {
         if (willIWork == 0){
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot...")
             //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
-            let role = message.guild.roles.find(role => role.name === "mute");
+            let role = message.guild.roles.cache.find(role => role.name === "mute");
             //person.removeRole(mainrole.id)
             this.addRole(role.id);
             setTimeout(function(){
