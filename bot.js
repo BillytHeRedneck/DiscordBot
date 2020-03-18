@@ -114,7 +114,7 @@ client.on('message', message=> {
             function reboot() {
                 message.channel.send("Rebooted")
             }
-            setTimeout(reboot,10000)           
+            setTimeout(reboot,10000);           
         } else {
             for (var i = 1; i <= num; i++){
                 var rand = Math.floor(Math.random() * Math.floor(2));
