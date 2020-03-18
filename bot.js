@@ -111,15 +111,7 @@ client.on('message', message=> {
         var counter = 0;
         if (willIWork == 0){
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot")
-            function sleep(milliseconds) {
-                var start = new Date().getTime();
-                for (var i = 0; i < 1e7; i++) {
-                    if ((new Date().getTime() - start) > milliseconds) {
-                        break;
-                    }
-                    }
-            }
-            sleep(10000) 
+            setTimeout(10000)
             message.channel.send("Rebooted")            
         } else {
             for (var i = 1; i <= num; i++){
