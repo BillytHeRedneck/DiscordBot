@@ -126,6 +126,8 @@ client.on('message', message=> {
                 message.channel.send({files : ["./Images/Skag Tail.jpg"]})
             } else {
                 message.channel.send({files : ["./Images/CL4P-TP Neutral.jpg"]})
+                message.channel.send("No one... what's this? I'm detecting a motor unit malfunction... I can't move! I'm paralyzed with fear!")
+
             }
         }
     } 
