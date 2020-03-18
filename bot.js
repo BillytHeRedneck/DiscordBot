@@ -112,43 +112,43 @@ client.on('message', message=> {
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot")
             var mute = "!mute @CLAP-TP 1 min";
             message.channel.send(mute)
-            let args = mute.content.substring(prefix.length).split(" ");
+            let args1 = mute.content.slice(prefix.length).split(" ");
  
-    switch (args[0]) {
-        case 'mute':
-            var person  = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
-            if(!person) return  message.reply("I CANT FIND THE USER " + person)
- 
-            
-            let role = message.guild.roles.find(role => role.name === "mute");
-           
- 
-            if(!role) return message.reply("Couldn't find the mute role.")
- 
- 
-            let time = args[2];
-            if(!time){
-                return message.reply("You didnt specify a time!");
-            }
- 
-            
-            person.addRole(role.id);
- 
- 
-            message.channel.send(`@${person.user.tag} has now been muted for ${ms(ms(time))}`)
- 
-            setTimeout(function(){
-               
+            switch (args[0]) {
+                case 'mute':
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
+                    if(!person) return  message.reply("I CANT FIND THE USER " + person)
+        
+                    
+                    let role = message.guild.roles.find(role => role.name === "mute");
                 
-                person.removeRole(role.id);
-                console.log(role.id)
-                message.channel.send(`@${person.user.tag} has been unmuted.`)
-            }, ms(time));
- 
- 
-   
-        break;
-    }
+        
+                    if(!role) return message.reply("Couldn't find the mute role.")
+        
+        
+                    let time = args[2];
+                    if(!time){
+                        return message.reply("You didnt specify a time!");
+                    }
+        
+                    
+                    person.addRole(role.id);
+        
+        
+                    message.channel.send(`@${person.user.tag} has now been muted for ${ms(ms(time))}`)
+        
+                    setTimeout(function(){
+                    
+                        
+                        person.removeRole(role.id);
+                        console.log(role.id)
+                        message.channel.send(`@${person.user.tag} has been unmuted.`)
+                    }, ms(time));
+        
+        
+        
+                break;
+            }
                     
          
         } else {
