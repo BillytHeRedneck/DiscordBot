@@ -110,8 +110,13 @@ client.on('message', message=> {
     } else if (msg.startsWith(prefix +"ht")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
-        for (var i =0; i<num; i++){
-            message.channel.send(Math.floor(Math.random() * Math.floor(num)))
+        for (var i = 1; i <= num; i++){
+            var rand = Math.random();
+            if (rand === 0){
+                message.channel.send("Flip number " + i + " is:     Heads")
+            } else {
+                message.channel.send("Flip number " + i + " is:     Tails")
+            }
         }
 
     } 
