@@ -111,8 +111,7 @@ client.on('message', message=> {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
         for (var i = 1; i <= num; i++){
-            var rand = Math.random();
-            message.channel.send(rand);
+            var rand = Math.random(2);
             if (rand === 0){
                 message.channel.send("Flip number " + i + " is:     Heads")
             } else {
