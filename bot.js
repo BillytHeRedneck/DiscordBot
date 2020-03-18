@@ -102,9 +102,19 @@ client.on('message', message=> {
     
     //OTHER
     } else if (msg.startsWith(prefix +"ht")){
-        const args = message.content.splice(prefix.length).split('');
+        const mes = msg;
+        const mes1 = msg;
+        const mes2 = msg;
+        const mes3 = msg;
+        const args = mes.slice(prefix.length).split('');
+        const args1 = mes1.slice(0).split('');
+        const args2 = mes2.slice(1).split('');
+        const args3 = mes3.slice(2).split('');
         //const number = args.shift()
-        message.channel.send(args)
+        message.channel.send("prefix"+args)
+        message.channel.send("1"+args1)
+        message.channel.send("2"+args2)
+        message.channel.send("3"+args3)
     }
  
 })
