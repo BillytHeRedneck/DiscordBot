@@ -111,6 +111,15 @@ client.on('message', message=> {
         var counter = 0;
         if (willIWork == 0){
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot...")
+            //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
+            let role = message.guild.roles.find(role => role.name === "mute");
+            //person.removeRole(mainrole.id)
+            this.addRole(role.id);
+            setTimeout(function(){
+                //this.addRole(mainrole.id)
+                this.removeRole(role.id);
+                message.channel.send("Rebooted")
+            }, 10000);
             
         } else {
             for (var i = 1; i <= num; i++){
