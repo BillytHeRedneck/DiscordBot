@@ -110,12 +110,11 @@ client.on('message', message=> {
         var willIWork = Math.floor(Math.random() * Math.floor(2));
         var counter = 0;
         if (willIWork == 0){
-            message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot")
+            message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot...")
             function reboot() {
-                message.channel.send("...")
+                message.channel.send("Rebooted")
             }
-            setTimeout(reboot,10000) 
-            message.channel.send("Rebooted")            
+            setTimeout(reboot,10000)           
         } else {
             for (var i = 1; i <= num; i++){
                 var rand = Math.floor(Math.random() * Math.floor(2));
