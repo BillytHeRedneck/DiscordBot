@@ -103,7 +103,7 @@ client.on('message', message=> {
     //OTHER
     } else if (msg.startsWith(prefix +"ht")) {
         const args = msg.slice(prefix.length).split(' ');
-        message.channel.send(args)
+        message.channel.send(args[1])
     }
  
 })
