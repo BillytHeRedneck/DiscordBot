@@ -112,9 +112,9 @@ client.on('message', message=> {
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot")
             var mute = "!mute @CLAP-TP 1 min";
             message.channel.send(mute)
-            let args1 = mute.content.slice(prefix.length).split(" ");
+            let args1 = mute.slice(prefix.length).split(" ");
  
-            switch (args[0]) {
+            switch (args1[0]) {
                 case 'mute':
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
                     if(!person) return  message.reply("I CANT FIND THE USER " + person)
