@@ -113,9 +113,9 @@ client.on('message', message=> {
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot...")
             
             let mes = "!mute @CL4P-TP 10s";
-            var person  = mes.guild.members.cache.get('CL4P-TP#8330')
-            let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
-            let role = message.guild.roles.cache.find(role => role.name === "mute");
+            var person  = msg.guild.members.cache.get('CL4P-TP#8330')
+            let mainrole = msg.guild.roles.find(role => role.name === "General Purpose Robot");
+            let role = msg.guild.roles.cache.find(role => role.name === "mute");
             person.roles.remove(mainrole.id)
             person.roles.add(role)
             setTimeout(function(){
