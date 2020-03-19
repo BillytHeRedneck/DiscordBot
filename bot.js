@@ -12,12 +12,12 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     setInterval(function()  {
-        if ((moment().tz("America/New_York").format("HH:mm") == '14:57') && dailyMeme == 0){
+        if ((moment().tz("America/New_York").format("HH:mm") == '15:08') && dailyMeme == 0){
             const channel = client.channels.cache.get('688827517913530565');
-            channel.send('meme?');
+            channel.send('Sure is lonely around here. Wish I had a meme...');
             dailyMeme++
         }
-        if ((moment().tz("America/New_York").format("HH:mm") == '15:00')){
+        if ((moment().tz("America/New_York").format("HH:mm") == '15:12')){
             dailyMeme=0
         }
     },60*1000)
@@ -109,7 +109,7 @@ client.on('message', message=> {
         
         
     //meme-a-day
-    } else if (message.channel.id == 570344442255376387){
+    } else if (message.channel.id == 688827517913530565){
         meme++
         if(meme==1){
         setTimeout(function(){
@@ -117,11 +117,9 @@ client.on('message', message=> {
             meme=0;
         }, 1500)
         
-    } /*else if (moment().tz("America/New_York").format("HH:mm") == '13:35'){
-        var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
-        testChannel.send("meme?")
+    } 
     //OTHER
-    */ } else if (msg.startsWith(prefix +"rnd")) {
+     } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
         var willIWork = Math.floor(Math.random() * Math.floor(2));
