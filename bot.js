@@ -110,7 +110,8 @@ client.on('message', message=> {
         var willIWork = Math.floor(Math.random() * Math.floor(2));
         var counter = 0;
         if (willIWork == 0){
-            message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot...")
+            message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working!")
+            /*
             let botMemberObj = '688847850469457952';
             if(botMemberObj) {
                 //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
@@ -125,7 +126,7 @@ client.on('message', message=> {
                     message.channel.send("Rebooted!!")
                 }, 10000);            
             }
-            /*
+            
             msg = "!mute @CL4P-TP"
             var person  = msg.mentions.members.first();
             let mainrole = person.guild.roles.find(role => role.name === "General Purpose Robot");
