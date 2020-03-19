@@ -16,7 +16,7 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    var j = schedule.scheduleJob('0 17 ? * 0,4-6', function(){
+    const j = schedule.scheduleJob('37 17', function(){
         //if(dailyMeme==0) {
         const channel = client.channels.cache.get('688827517913530565');
         channel.send('The answer to life, the universe, and everything!');
