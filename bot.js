@@ -116,7 +116,8 @@ client.on('message', message=> {
                 //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
                 let roleID = '\@mute'
                 //person.roles.remove(mainrole.id)
-                botMemberObj.roles.add('\@mute')
+                botMemberObj.role.add('\@mute')
+                //botMemberObj.roles.add('\@mute')
                 setTimeout(function(){
                     //person.roles.add(mainrole.id)
                     botMemberObj.roles.remove('\@mute');
