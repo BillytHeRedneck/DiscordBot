@@ -11,13 +11,11 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    setInterval(() => {
-        if (moment().tz("America/New_York").format("HH:mm") == '14:30' && dailyMeme == 0){
+        if (moment().tz("America/New_York").format("HH:mm") == '14:33' && dailyMeme == 0){
             const channel = client.channels.cache.get('688827517913530565');
-            channel.send('meme');
+            channel.send('meme?');
             dailyMeme++
         }
-    }, 10000); // Runs this every 10 seconds.
 });
 
 /*
