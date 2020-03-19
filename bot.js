@@ -1,4 +1,4 @@
-//import moment from 'moment';
+const moment = require("moment-timezone");
 const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
