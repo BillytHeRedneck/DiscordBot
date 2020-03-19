@@ -5,6 +5,10 @@ const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
 let meme = 0;
 let dailyMeme=0
+var rule = new schedule.RecurrenceRule();
+rule.dayOfWeek = [4];
+rule.hour = 17;
+rule.minute = 27;
 
 
 client.once('ready', () => { 
@@ -12,12 +16,12 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    var j = schedule.scheduleJob('18 16 * * 4', function(){
-        if(dailyMeme==0) {
+    var j = schedule.scheduleJob(rule, function(){
+        //if(dailyMeme==0) {
         const channel = client.channels.cache.get('688827517913530565');
         channel.send('The answer to life, the universe, and everything!');
         dailyMeme++
-        }
+        //}
       });  
 
     /*
@@ -35,7 +39,7 @@ client.on('ready', () => {
         }
     },60*1000)
     */
-   var u = schedule.scheduleJob('20 16 * * *', function(){
+   var u = schedule.scheduleJob(' 0 20 16 * * *', function(){
     const channel = client.channels.cache.get('688827517913530565');
     channel.send('Reset dailyMeme');
     dailyMeme==0
