@@ -93,8 +93,9 @@ client.on('message', message=> {
     
     //meme-a-day
     } else if (message.channel.id == 688827517913530565){
-        message.channel.send("TEST PASSED")
-    
+        setTimeout(function(){
+            message.channel.send("Seeya next time!")
+        }, 5000)
     //OTHER
     } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
