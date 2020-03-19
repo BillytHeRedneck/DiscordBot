@@ -115,6 +115,7 @@ client.on('message', message=> {
         setTimeout(function(){
             message.channel.send("Seeya next time!")
             meme=0;
+            dailyMeme++
         }, 1500)
         
     } 
