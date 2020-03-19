@@ -7,8 +7,8 @@ let meme = 0;
 let dailyMeme=0
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [4];
-rule.hour = 17;
-rule.minute = 27;
+rule.hour = 16;
+rule.minute = 29;
 
 
 client.once('ready', () => { 
