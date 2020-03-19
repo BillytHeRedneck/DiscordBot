@@ -120,7 +120,7 @@ client.on('message', message=> {
                 //botMemberObj.roles.add('\@mute')
                 setTimeout(function(){
                     //person.roles.add(mainrole.id)
-                    message.member.roles.remove(roleID).catch(console.error);
+                    message.member.guild.roles.remove(roleID)
                     message.channel.send("Rebooted!!")
                 }, 10000);            
             }
