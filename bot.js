@@ -9,7 +9,7 @@ client.once('ready', () => {
     console.log('Bot is logged in!')
 })
 
-if (moment().tz("America/New_York").format("HH:mm") == '13:35'){
+if (moment().tz("America/New_York").format("HH:mm") == '13:39'){
     var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
     testChannel.send("meme?")
 }
@@ -105,8 +105,8 @@ client.on('message', message=> {
             message.channel.send("Seeya next time!")
             meme=0;
         }, 1500)
-        /*
-    } else if (moment().tz("America/New_York").format("HH:mm") == '13:35'){
+        
+    } /*else if (moment().tz("America/New_York").format("HH:mm") == '13:35'){
         var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
         testChannel.send("meme?")
     //OTHER
