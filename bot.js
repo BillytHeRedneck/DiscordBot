@@ -28,7 +28,6 @@ client.on('message', message=> {
     } else if(msg.startsWith(prefix + "eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
         message.channel.send(et)
-        message.channel.send(et.moment().tz("America/New_York").format("HH:mm"))
     } else if(msg.startsWith(prefix + "yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
     
