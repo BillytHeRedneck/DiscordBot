@@ -92,7 +92,10 @@ client.on('message', message=> {
    
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
-       message.channel.send(dec.tz('America/New_York').format('ha z'))
+        message.channel.send(
+        moment().tz("Europe/Copenhagen").format("HH:mm z") + ", " +
+        moment().tz("America/New_York").format("HH:mm z") + ", and " +
+        moment().tz("America/Los_Angeles").format("HH:mm z"))
     //meme-a-day
     } else if (message.channel.id == 570344442255376387){
         meme++
