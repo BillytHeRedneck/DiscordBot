@@ -9,6 +9,10 @@ client.once('ready', () => {
     console.log('Bot is logged in!')
 })
 
+if (moment().tz("America/New_York").format("HH:mm") == '13:35'){
+    var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
+    testChannel.send("meme?")
+}
 client.on('message', message=> {
     
     msg = message.content.toLowerCase()
@@ -101,11 +105,12 @@ client.on('message', message=> {
             message.channel.send("Seeya next time!")
             meme=0;
         }, 1500)
+        /*
     } else if (moment().tz("America/New_York").format("HH:mm") == '13:35'){
         var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
         testChannel.send("meme?")
     //OTHER
-    } else if (msg.startsWith(prefix +"rnd")) {
+    */ } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
         var willIWork = Math.floor(Math.random() * Math.floor(2));
