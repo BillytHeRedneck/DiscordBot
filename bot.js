@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
 let meme = 0;
+let et = moment().tz("America/New_York").format("HH:mm")
 
 
 client.once('ready', () => { 
@@ -26,7 +27,8 @@ client.on('message', message=> {
     //GIF
     } else if(msg.startsWith(prefix + "eric")){
         message.channel.send({files : ["./Images/Eric Andre Unimpressed.gif"]})
-    
+        message.channel.send(et)
+        message.channel.send(et.moment().tz("America/New_York").format("HH:mm"))
     } else if(msg.startsWith(prefix + "yesss")){
         message.channel.send({files : ["./Images/Yesss.gif"]})
     
