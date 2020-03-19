@@ -1,4 +1,4 @@
-import moment from 'moment';
+//import moment from 'moment';
 const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
@@ -92,7 +92,7 @@ client.on('message', message=> {
    
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
-        message.channel.send(dec.tz('America/New_York').format('ha z'))
+       // message.channel.send(dec.tz('America/New_York').format('ha z'))
     //meme-a-day
     } else if (message.channel.id == 570344442255376387){
         meme++
@@ -100,7 +100,7 @@ client.on('message', message=> {
         setTimeout(function(){
             message.channel.send("Seeya next time!")
             meme=0;
-        }, 10000)
+        }, 100)
     }
     //OTHER
     } else if (msg.startsWith(prefix +"rnd")) {
