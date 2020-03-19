@@ -92,7 +92,7 @@ client.on('message', message=> {
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
     
     //meme-a-day
-    } else if (message.channel.id == 688827517913530565){
+    } else if (message.channel.id == 570344442255376387){
         setTimeout(function(){
             message.channel.send("Seeya next time!")
         }, 5000)
