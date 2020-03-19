@@ -1,4 +1,5 @@
 const moment = require("moment-timezone");
+var schedule = require('node-schedule');
 const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
@@ -11,10 +12,17 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
+    var j = schedule.scheduleJob('54 * * * *', function(){
+        const channel = client.channels.cache.get('688827517913530565');
+        channel.send('The answer to life, the universe, and everything!');
+        //console.log('The answer to life, the universe, and everything!');
+      });
+
+    /*
     setInterval(function()  {
         if ((moment().tz("America/New_York").format("ddd") != 'Sat') && 
             (moment().tz("America/New_York").format("ddd") != 'Sun') &&
-            (moment().tz("America/New_York").format("HH:dd") != '15:35') &&
+            (moment().tz("America/New_York").format("HH:dd") == '15:35') &&
             dailyMeme == 0) {
             const channel = client.channels.cache.get('688827517913530565');
             channel.send('Sure is lonely around here. Wish I had a meme...');
@@ -24,6 +32,7 @@ client.on('ready', () => {
             dailyMeme=0
         }
     },60*1000)
+    */
 });
 
 
