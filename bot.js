@@ -12,7 +12,7 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    var j = schedule.scheduleJob('03 16 ? * 4', function(){
+    var j = schedule.scheduleJob('10 16 ? * 4', function(){
         if(dailyMeme==0) {
         const channel = client.channels.cache.get('688827517913530565');
         channel.send('The answer to life, the universe, and everything!');
@@ -35,7 +35,7 @@ client.on('ready', () => {
         }
     },60*1000)
     */
-   var u = schedule.scheduleJob('06 16 ? * *', function(){
+   var u = schedule.scheduleJob('12 16 ? * *', function(){
     const channel = client.channels.cache.get('688827517913530565');
     channel.send('Reset dailyMeme');
     dailyMeme==0
@@ -52,7 +52,6 @@ client.on('message', message=> {
     else if(msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
         message.channel.send(dailyMeme)
-        message.channel.send(moment().tz("America/New_York").format("ddd"))
         
 
     //GIF
