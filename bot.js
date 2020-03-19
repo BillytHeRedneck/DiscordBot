@@ -17,10 +17,10 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     
-    const j = schedule.scheduleJob('49 18 * * 1-5', function(){
+    const j = schedule.scheduleJob("51 18 * * 1-5", function(){
         //if(dailyMeme==0) {
-        const channel = 688827517913530565;
-        channel.send("lonely around here");
+        const channel = 688827517913530565
+        channel.send("lonely around here")
         dailyMeme++
         //}
       })
@@ -42,9 +42,9 @@ client.on('ready', () => {
         }
     },60*1000)
     */
-   var u = schedule.scheduleJob('50 18 * * *', function(){
+   var u = schedule.scheduleJob("52 18 * * *", function(){
     const channel = 688827517913530565
-    channel.send("Reset dailyMeme");
+    channel.send("Reset dailyMeme")
     dailyMeme==0
   })
 })
