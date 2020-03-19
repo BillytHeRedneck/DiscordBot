@@ -114,13 +114,13 @@ client.on('message', message=> {
             let botMemberObj = '\@CL4P-TP';
             if(botMemberObj) {
                 //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
-                let roleID = '\@mute'
+                let roleID = '689862628809769024'
                 //person.roles.remove(mainrole.id)
-                message.member.roles.add('\@mute')
+                message.member.roles.add(roleID)
                 //botMemberObj.roles.add('\@mute')
                 setTimeout(function(){
                     //person.roles.add(mainrole.id)
-                    botMemberObj.roles.remove('\@mute');
+                    message.member.roles.remove(roleID);
                     message.channel.send("Rebooted!!")
                 }, 10000);            
             }
