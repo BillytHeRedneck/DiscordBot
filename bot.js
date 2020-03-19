@@ -11,11 +11,13 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-        if ((moment().tz("America/New_York").format("HH:mm") == '14:47') && dailyMeme == 0){
+    setInterval(function()  {
+        if ((moment().tz("America/New_York").format("HH:mm") == '14:52') && dailyMeme == 0){
             const channel = client.channels.cache.get('688827517913530565');
             channel.send('meme?');
             dailyMeme++
         }
+    },60*1000)
 });
 
 /*
