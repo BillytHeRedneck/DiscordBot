@@ -12,20 +12,18 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     setInterval(function()  {
-        if ((moment().tz("America/New_York").format("HH:mm") == '14:52') && dailyMeme == 0){
+        if ((moment().tz("America/New_York").format("HH:mm") == '14:57') && dailyMeme == 0){
             const channel = client.channels.cache.get('688827517913530565');
             channel.send('meme?');
             dailyMeme++
         }
+        if ((moment().tz("America/New_York").format("HH:mm") == '15:00')){
+            dailyMeme=0
+        }
     },60*1000)
 });
 
-/*
-if (moment().tz("America/New_York").format("HH:mm") == '13:56'){
-    var testChannel = 688827517913530565
-    message.testChannel.send("meme?")
-}
-*/
+
 client.on('message', message=> {
     
     msg = message.content.toLowerCase()
