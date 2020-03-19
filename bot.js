@@ -111,16 +111,16 @@ client.on('message', message=> {
         var counter = 0;
         if (willIWork == 0){
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot...")
-            let botMemberObj = '\@CL4P-TP';
+            let botMemberObj = '688847850469457952';
             if(botMemberObj) {
                 //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
                 let roleID = '689862628809769024'
                 //person.roles.remove(mainrole.id)
-                message.member.roles.add(roleID)
+                message.member.roles.add(roleID).catch(console.error);
                 //botMemberObj.roles.add('\@mute')
                 setTimeout(function(){
                     //person.roles.add(mainrole.id)
-                    message.member.roles.remove(roleID);
+                    message.member.roles.remove(roleID).catch(console.error);
                     message.channel.send("Rebooted!!")
                 }, 10000);            
             }
