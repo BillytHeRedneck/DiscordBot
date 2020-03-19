@@ -91,6 +91,10 @@ client.on('message', message=> {
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
     
+    //meme-a-day
+    } else if (message.channel.id == 688827517913530565){
+        message.channel.send("TEST PASSED")
+    
     //OTHER
     } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
