@@ -9,7 +9,11 @@ let et = moment().tz("America/New_York").format("HH:mm")
 client.once('ready', () => { 
     console.log('Bot is logged in!')
 })
-
+client.on('ready', () => {
+    setInterval(() => {
+        client.channels.get('688827517913530565').send('this should be running by itself every 10 seconds')
+    }, 10000); // Runs this every 10 seconds.
+});
 if (moment().tz("America/New_York").format("HH:mm") == '13:56'){
     var testChannel = 688827517913530565
     message.testChannel.send("meme?")
