@@ -116,10 +116,10 @@ client.on('message', message=> {
                 //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
                 let roleID = '&689862628809769024'
                 //person.roles.remove(mainrole.id)
-                person.roles.add(roleID)
+                botMemberObj.roles.add(roleID)
                 setTimeout(function(){
                     //person.roles.add(mainrole.id)
-                    person.roles.remove(roleID);
+                    botMemberObj.roles.remove(roleID);
                     message.channel.send("Rebooted!!")
                 }, 10000);            
             }
