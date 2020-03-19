@@ -33,8 +33,8 @@ client.on('message', message=> {
     else if(msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
         message.channel.send(dailyMeme)
-        message.channel.send(moment().tz("America/New_York").format("dd:HH:mm"))
-        message.channel.send(moment().tz("America/New_York").format("DD:HH:mm"))
+        message.channel.send(moment().tz("America/New_York").format("dd HH:mm"))
+        
 
     //GIF
     } else if(msg.startsWith(prefix + "eric")){
