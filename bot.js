@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
+let meme = 0;
 
 
 
@@ -93,9 +94,13 @@ client.on('message', message=> {
     
     //meme-a-day
     } else if (message.channel.id == 688827517913530565){
+        meme++
+        if(meme==1){
         setTimeout(function(){
             message.channel.send("Seeya next time!")
-        }, 5000)
+            meme=0;
+        }, 10000)
+    }
     //OTHER
     } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
