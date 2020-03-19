@@ -11,7 +11,7 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-        if (moment().tz("America/New_York").format("HH:mm") == '14:33' && dailyMeme == 0){
+        if (moment().tz("America/New_York").format("HH:mm") == '14:37' && dailyMeme == 0){
             const channel = client.channels.cache.get('688827517913530565');
             channel.send('meme?');
             dailyMeme++
