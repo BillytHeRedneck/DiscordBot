@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
 let meme = 0;
-
+var dec = moment("2014-12-01T12:00:00Z");
 
 
 client.once('ready', () => { 
@@ -91,7 +91,7 @@ client.on('message', message=> {
    
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
-    
+        message.channel.send(dec.tz('America/New_York').format('ha z'))
     //meme-a-day
     } else if (message.channel.id == 570344442255376387){
         meme++
