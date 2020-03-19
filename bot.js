@@ -1,8 +1,8 @@
+import moment from 'moment';
 const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
 let meme = 0;
-import moment from 'moment';
 var dec = moment("2014-12-01T12:00:00Z");
 
 
