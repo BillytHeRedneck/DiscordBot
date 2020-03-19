@@ -11,8 +11,8 @@ client.once('ready', () => {
 
 
 client.on('message', message=> {
-    if (moment().tz("America/New_York").format("HH:mm") == '13:48'){
-        var testChannel = '688827517913530565'
+    if (moment().tz("America/New_York").format("HH:mm") == '13:50'){
+        var testChannel = 688827517913530565
         testChannel.send("meme?")
     }
     msg = message.content.toLowerCase()
