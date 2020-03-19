@@ -11,8 +11,8 @@ client.once('ready', () => {
 
 
 client.on('message', message=> {
-    if (moment().tz("America/New_York").format("HH:mm") == '13:45'){
-        var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
+    if (moment().tz("America/New_York").format("HH:mm") == '13:48'){
+        var testChannel = '688827517913530565'
         testChannel.send("meme?")
     }
     msg = message.content.toLowerCase()
@@ -95,7 +95,7 @@ client.on('message', message=> {
    
     } else if(msg.startsWith(prefix + "devilno")){
         message.channel.send({files : ["./Images/Yeah...no.gif"]})
-        message.channel.send(moment().tz("America/New_York").format("HH:mm") == '13:43')
+        
         
     //meme-a-day
     } else if (message.channel.id == 570344442255376387){
