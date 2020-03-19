@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const{ prefix, prefix2, token } = require ('./config.json');
 const client = new Discord.Client();
 let meme = 0;
-let et = moment().tz("America/New_York").format("HH:mm")
+let dailyMeme=0
 
 
 client.once('ready', () => { 
@@ -12,8 +12,11 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     setInterval(() => {
-        const channel = client.channels.cache.get('688827517913530565');
-        channel.send('this should send by itself to test');
+        if (moment().tz("America/New_York").format("HH:mm") == '14:30' && dailyMeme == 0){
+            const channel = client.channels.cache.get('688827517913530565');
+            channel.send('meme');
+            dailyMeme++
+        }
     }, 10000); // Runs this every 10 seconds.
 });
 
