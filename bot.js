@@ -117,6 +117,7 @@ client.on('message', message=> {
                 let roleID = '689862628809769024'
                 //person.roles.remove(mainrole.id)
                 message.member.guild.roles.add(roleID)
+                message.channel.send("role should be added")
                 //botMemberObj.roles.add('\@mute')
                 setTimeout(function(){
                     //person.roles.add(mainrole.id)
