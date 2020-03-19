@@ -12,11 +12,12 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    var j = schedule.scheduleJob('58 15 ? * 4', function(){
-        if(dailyMeme==0)
+    var j = schedule.scheduleJob('03 16 ? * 4', function(){
+        if(dailyMeme==0) {
         const channel = client.channels.cache.get('688827517913530565');
         channel.send('The answer to life, the universe, and everything!');
         dailyMeme++
+        }
       });  
 
     /*
@@ -34,7 +35,9 @@ client.on('ready', () => {
         }
     },60*1000)
     */
-   var u = schedule.scheduleJob('0 16 ? * *', function(){
+   var u = schedule.scheduleJob('06 16 ? * *', function(){
+    const channel = client.channels.cache.get('688827517913530565');
+    channel.send('Reset dailyMeme');
     dailyMeme==0
   });
 });
