@@ -12,12 +12,12 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     setInterval(function()  {
-        if ((moment().tz("America/New_York").format("HH:mm") == '15:08') && dailyMeme == 0){
+        if ((moment().tz("America/New_York").format("HH:mm") == '22:00') && dailyMeme == 0){
             const channel = client.channels.cache.get('688827517913530565');
             channel.send('Sure is lonely around here. Wish I had a meme...');
             dailyMeme++
         }
-        if ((moment().tz("America/New_York").format("HH:mm") == '15:12')){
+        if ((moment().tz("America/New_York").format("HH:mm") == '00:00')){
             dailyMeme=0
         }
     },60*1000)
@@ -33,6 +33,8 @@ client.on('message', message=> {
     else if(msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
         message.channel.send(dailyMeme)
+        message.channel.send(moment().tz("America/New_York").format("dd:HH:mm"))
+        message.channel.send(moment().tz("America/New_York").format("DD:HH:mm")
 
     //GIF
     } else if(msg.startsWith(prefix + "eric")){
