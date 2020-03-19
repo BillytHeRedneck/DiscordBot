@@ -111,10 +111,10 @@ client.on('message', message=> {
         var counter = 0;
         if (willIWork == 0){
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working! Please give me some time to reboot...")
-            let botMemberObj = message.guild.members.cache.get('CL4P-TP#8330');
+            let botMemberObj = '688847850469457952';
             if(botMemberObj) {
                 //let mainrole = message.guild.roles.find(role => role.name === "General Purpose Robot");
-                let roleID = '689862358092218392'
+                let roleID = '&689862628809769024'
                 //person.roles.remove(mainrole.id)
                 person.roles.add(roleID)
                 setTimeout(function(){
