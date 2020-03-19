@@ -17,10 +17,10 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     
-    const j = schedule.scheduleJob('44 18 * * 1-5', function(){
+    const j = schedule.scheduleJob('46 18 * * 1-5', function(){
         //if(dailyMeme==0) {
         const channel = 688827517913530565;
-        channel.send('The answer to life, the universe, and everything!');
+        channel.send("lonely around here");
         dailyMeme++
         //}
       })
@@ -42,9 +42,9 @@ client.on('ready', () => {
         }
     },60*1000)
     */
-   var u = schedule.scheduleJob('46 18 * * *', function(){
+   var u = schedule.scheduleJob('47 18 * * *', function(){
     const channel = 688827517913530565
-    channel.send('Reset dailyMeme');
+    channel.send("Reset dailyMeme");
     dailyMeme==0
   })
 })
