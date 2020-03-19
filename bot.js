@@ -9,12 +9,12 @@ client.once('ready', () => {
     console.log('Bot is logged in!')
 })
 
-if (moment().tz("America/New_York").format("HH:mm") == '13:39'){
-    var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
-    testChannel.send("meme?")
-}
+
 client.on('message', message=> {
-    
+    if (moment().tz("America/New_York").format("HH:mm") == '13:45'){
+        var testChannel = client.channels.find(channel => channel.id === 688827517913530565)
+        testChannel.send("meme?")
+    }
     msg = message.content.toLowerCase()
     if (message.author.bot) return; 
     
