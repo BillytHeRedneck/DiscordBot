@@ -129,7 +129,7 @@ client.on('ready', () => {
         dailyMeme++
     }
   })
-  var l5 = schedule.scheduleJob("26 16 * * 5", function(){
+  var l5 = schedule.scheduleJob("29 16 * * 1-5", function(){
     if(dailyMeme==0) {
         channel.send("Day: 5")
         dailyMeme++
