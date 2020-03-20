@@ -25,7 +25,7 @@ client.on('ready', () => {
         dailyMeme++
         //}
       })
-   var u = schedule.scheduleJob("18 01 * * *", function(){
+   var u = schedule.scheduleJob("0 01 * * *", function(){
     //const channel = 688827517913530565
     channel.send("1, the time is " + moment().tz("America/New_York").format("HH:mm"))
     dailyMeme==0
