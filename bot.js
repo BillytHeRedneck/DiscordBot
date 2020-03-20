@@ -10,7 +10,7 @@ var lastBoy = "Junaid"
 
 
 client.once('ready', () => {
-    console.log('Bot is logged in!')
+    console.log('Bot is logged in!!')
 })
 
 client.on('ready', () => {
