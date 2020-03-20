@@ -16,9 +16,9 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    const channel = 688827517913530565
+    const channel = client.channels.cache.get('688827517913530565')
     channel.send("I AM ALIVE")
-    const j = schedule.scheduleJob("20 20 * * 4", function(){
+    const j = schedule.scheduleJob("22 20 * * 4", function(){
         //if(dailyMeme==0) {
         //const channel = 688827517913530565
         channel.send("lonely around here")
@@ -44,7 +44,7 @@ client.on('ready', () => {
     },60*1000)
     */
    channel.send("before u")
-   var u = schedule.scheduleJob("21 20 * * *", function(){
+   var u = schedule.scheduleJob("23 20 * * *", function(){
     //const channel = 688827517913530565
     channel.send("Reset dailyMeme")
     dailyMeme==0
