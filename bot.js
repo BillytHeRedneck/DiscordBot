@@ -188,11 +188,14 @@ client.on('message', message => {
         }
 
     //setter for lastBoy
-    } else if(msg.startsWith(prefix + "setboy")){    
+    } else if(message.startsWith(prefix + "setboy")){    
         const args = msg.slice(prefix.length).split(' ');
         setLastBoy(args[1])
         message.channel.send("The last unboxer has been set to " + lastBoy)
 
+    } else if (msg.startsWith(prefix + "getboy")){
+        message.channel.send("The last unboxer was " + lastBoy)
+         
     //heads or tails
     } else if (msg.startsWith(prefix + "ht")) {
         const args = msg.slice(prefix.length).split(' ');
