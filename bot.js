@@ -153,7 +153,12 @@ client.on('message', message => {
 
     //unbox
     } else if (msg.startsWith(prefix + "unbox")){
-        message.channel.send("Last unboxing, the unboxer was " + lastBoy)
+        if (lastBoy == 'undefined'){
+            message.channel.send("I just searched my records and I cannot seem to find who the last unboxer was." +
+            " You should set it next time by calling !setboy but anyway, ONTO THE UNBOXING!")
+        } else {
+            message.channel.send("Last unboxing, the unboxer was " + lastBoy)
+        }
         setTimeout(function(){
             message.channel.send("Today's unboxer is... drum roll please...")
         },1000)
@@ -183,11 +188,11 @@ client.on('message', message => {
         }
 
     //setter for lastBoy
-    } else if(msg.startsWith(prefix + "setBoy")){    
+    } else if(msg.startsWith(prefix + "setboy")){    
         const args = msg.slice(prefix.length).split(' ');
         setLastBoy(args[1])
         message.channel.send("The last unboxer has been set to " + lastBoy)
-        
+
     //heads or tails
     } else if (msg.startsWith(prefix + "ht")) {
         const args = msg.slice(prefix.length).split(' ');
