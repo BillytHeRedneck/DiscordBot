@@ -148,7 +148,7 @@ client.on('ready', () => {
             (moment().tz("America/New_York").format("HH:mm") == '15:35') &&
             dailyMeme == 0) {
             const channel = client.channels.cache.get('688827517913530565');
-            channel.send('Sure is lonely around here. Wish I had a meme...');
+            channel.send('Sure is lonely around here. Wish I had a meme....');
             dailyMeme++
         }
         if ((moment().tz("America/New_York").format("HH:mm") == '00:00')){
