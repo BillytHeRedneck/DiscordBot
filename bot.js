@@ -153,7 +153,7 @@ client.on('message', message => {
 
     //unbox
     } else if (msg.startsWith(prefix + "unbox")){
-        if (lastBoy == "undefined"){
+        if (lastBoy == undefined){
             message.channel.send("I just searched my records and I cannot seem to find who the last unboxer was." +
             " You should set it next time by calling !setboy but anyway, ONTO THE UNBOXING!")
         } else {
@@ -194,6 +194,7 @@ client.on('message', message => {
         setLastBoy(args[1])
         message.channel.send("The last unboxer has been set to " + lastBoy)
 
+    //getter for lastBoy
     } else if (msg.startsWith(prefix + "getboy")){
         message.channel.send("The last unboxer was " + lastBoy)
          
