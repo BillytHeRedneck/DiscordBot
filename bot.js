@@ -147,6 +147,9 @@ client.on('message', message => {
 
     } else if (msg.startsWith(prefix + "unbox")){
         message.channel.send("Last unboxing, the unboxer was " + lastBoy)
+        setTimeout(function(){
+            message.channel.send("Today's unboxer is... drum roll please...")
+        },1000)
         var whichBoyNum = Math.floor(Math.random() * Math.floor(3));
         var whichBoy;
         switch (whichBoyNum){
@@ -161,10 +164,11 @@ client.on('message', message => {
                 break
         }
         if (whichBoy === lastBoy){
-            message.channel.send("Well that's boring... it's " + whichBoy + " again...")
+            setTimeout(function(){
+                message.channel.send("Well that's boring... it's " + whichBoy + " again...")
+            },1000)
             lastBoy=whichBoy;
         } else{
-            message.channel.send("Today's unboxer is... drum roll please...")
             setTimeout(function() {
                 message.channel.send(whichBoy +"!!! This way! The [loot]box is awaiting your attention.")
             }, 1000)
