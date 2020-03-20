@@ -19,11 +19,10 @@ client.on('ready', () => {
     const channel = client.channels.cache.get('688827517913530565')
     
     var j = schedule.scheduleJob("0 0 * * *", function(){
-        //if(dailyMeme==0) {
-        //const channel = 688827517913530565
-        channel.send("0, the time is " + moment().tz("America/New_York").format("HH:mm"))
-        dailyMeme++
-        //}
+        if(dailyMeme==0) {
+            channel.send("Sure is lonely around here... wish I had a meme")
+            dailyMeme++
+        }
       })
    var u = schedule.scheduleJob("0 01 * * *", function(){
     //const channel = 688827517913530565
@@ -100,14 +99,47 @@ client.on('ready', () => {
     channel.send("15, the time is " + moment().tz("America/New_York").format("HH:mm"))
     dailyMeme==0
   })
-  var l = schedule.scheduleJob("20 16 * * *", function(){
-      if (dailyMeme==0){
-
-      
-    //const channel = 688827517913530565
-    channel.send("Sure is lonely around here. Wish I had a meme... The time is " + moment().tz("America/New_York").format("HH:mmA"))
-    dailyMeme==0
-      }
+  var l = schedule.scheduleJob("26 16 * * 0", function(){
+    if(dailyMeme==0) {
+        channel.send("Day: 0")
+        dailyMeme++
+    }
+  })
+  var l1 = schedule.scheduleJob("26 16 * * 1", function(){
+    if(dailyMeme==0) {
+        channel.send("Day: 1")
+        dailyMeme++
+    }
+  })
+  var l2 = schedule.scheduleJob("26 16 * * 2", function(){
+    if(dailyMeme==0) {
+        channel.send("Day: 2")
+        dailyMeme++
+    }
+  })
+  var l3 = schedule.scheduleJob("26 16 * * 3", function(){
+    if(dailyMeme==0) {
+        channel.send("Day: 3")
+        dailyMeme++
+    }
+  })
+  var l4 = schedule.scheduleJob("26 16 * * 4", function(){
+    if(dailyMeme==0) {
+        channel.send("Day: 4")
+        dailyMeme++
+    }
+  })
+  var l5 = schedule.scheduleJob("26 16 * * 5", function(){
+    if(dailyMeme==0) {
+        channel.send("Day: 5")
+        dailyMeme++
+    }
+  })
+  var l6 = schedule.scheduleJob("26 16 * * 6", function(){
+    if(dailyMeme==0) {
+        channel.send("Day: 6")
+        dailyMeme++
+    }
   })
   var m = schedule.scheduleJob("0 17 * * *", function(){
     //const channel = 688827517913530565
@@ -335,6 +367,8 @@ client.on('message', message=> {
 client.login(token);
 
 /*
+scheduleJob():
+hours -> real life time
 4->0
 5->1
 6->2
