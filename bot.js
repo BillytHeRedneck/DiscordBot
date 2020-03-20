@@ -189,9 +189,7 @@ client.on('message', message => {
 
     //setter for lastBoy
     } else if(msg.startsWith(prefix + "setboy")){ 
-        msg[8].toUpperCase();   
-        const args = msg.split(' ');
-
+        const args = message.content.split(' ');
         setLastBoy(args[1])
         message.channel.send("The last unboxer has been set to " + lastBoy)
 
