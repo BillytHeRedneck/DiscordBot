@@ -141,34 +141,34 @@ client.on('ready', () => {
         dailyMeme++
     }
   })
-  var m = schedule.scheduleJob("5 17 * * *", function(){
+  var m = schedule.scheduleJob("10 17 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("hha, the time is " + moment().tz("America/New_York").format("hh:mm a"))
+    channel.send("hha, the time is " + moment().tz("America/Los_Angeles").format("hh:mm a"))
     dailyMeme==0
   })
-  var m1 = schedule.scheduleJob("5 17 * * *", function(){
+  var m1 = schedule.scheduleJob("10 17 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("hhA, the time is " + moment().tz("America/New_York").format("hh:mm A"))
+    channel.send("hhA, the time is " + moment().tz("America/Los_Angeles").format("hh:mm A"))
     dailyMeme==0
   })
-  var m2 = schedule.scheduleJob("5 17 * * *", function(){
+  var m2 = schedule.scheduleJob("10 17 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("hhaA, the time is " + moment().tz("America/New_York").format("hh:mm aA"))
+    channel.send("hhaA, the time is " + moment().tz("America/Los_Angeles").format("hh:mm aA"))
     dailyMeme==0
   })
-  var m3 = schedule.scheduleJob("5 17 * * *", function(){
+  var m3 = schedule.scheduleJob("10 17 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("ha, the time is " + moment().tz("America/New_York").format("h:mm a"))
+    channel.send("ha, the time is " + moment().tz("America/Los_Angeles").format("h:mm a"))
     dailyMeme==0
   })
-  var m4 = schedule.scheduleJob("5 17 * * *", function(){
+  var m4 = schedule.scheduleJob("10 17 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("hA, the time is " + moment().tz("America/New_York").format("h:mm A"))
+    channel.send("hA, the time is " + moment().tz("America/Los_Angeles").format("h:mm A"))
     dailyMeme==0
   })
-  var m5 = schedule.scheduleJob("5 17 * * *", function(){
+  var m5 = schedule.scheduleJob("10 17 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("haA, the time is " + moment().tz("America/New_York").format("h:mm aA"))
+    channel.send("haA, the time is " + moment().tz("America/Los_Angeles").format("h:mm aA"))
     dailyMeme==0
   })
   var n = schedule.scheduleJob("0 18 * * *", function(){
