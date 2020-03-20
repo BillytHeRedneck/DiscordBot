@@ -21,7 +21,7 @@ client.on('ready', () => {
     const j = schedule.scheduleJob("0 0 * * *", function(){
         //if(dailyMeme==0) {
         //const channel = 688827517913530565
-        channel.send("0, the time is " + moment().tz("America/New_York").format("HH:dd"))
+        channel.send("0, the time is " + moment().tz("America/New_York").format("HH:mm"))
         dailyMeme++
         //}
       })
@@ -32,7 +32,7 @@ client.on('ready', () => {
     setInterval(function()  {
         if ((moment().tz("America/New_York").format("ddd") != 'Sat') && 
             (moment().tz("America/New_York").format("ddd") != 'Sun') &&
-            (moment().tz("America/New_York").format("HH:dd") == '15:35') &&
+            (moment().tz("America/New_York").format("HH:mm") == '15:35') &&
             dailyMeme == 0) {
             const channel = client.channels.cache.get('688827517913530565');
             channel.send('Sure is lonely around here. Wish I had a meme...');
@@ -43,9 +43,9 @@ client.on('ready', () => {
         }
     },60*1000)
     */
-   var u = schedule.scheduleJob("9 1 * * *", function(){
+   var u = schedule.scheduleJob("11 1 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("1, the time is " + moment().tz("America/New_York").format("HH:dd"))
+    channel.send("1, the time is " + moment().tz("America/New_York").format("HH:mm"))
     dailyMeme==0
   })
 
