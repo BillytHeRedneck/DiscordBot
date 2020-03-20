@@ -5,6 +5,7 @@ const { prefix, prefix2, token } = require('./config.json');
 const client = new Discord.Client();
 let meme = 0;
 let dailyMeme = 0
+var lastBoy = "Junaid"
 
 
 
@@ -15,9 +16,9 @@ client.once('ready', () => {
 client.on('ready', () => {
 
 
-    var dailyMemeReminder = schedule.scheduleJob("38 18 * * 1-5", function () {
+    var dailyMemeReminder = schedule.scheduleJob("0 0 * * 1-5", function () {
         if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('688827517913530565')
+            const channel = client.channels.cache.get('570344442255376387')
             channel.send("Sure is lonely around here... wish I had a meme")
             dailyMeme++
         }
@@ -117,7 +118,7 @@ client.on('message', message => {
         message.channel.send({ files: ["./Images/HeheBoy.gif"] })
 
     //meme-a-day
-    } else if (message.channel.id == 688827517913530565) {
+    } else if (message.channel.id == 570344442255376387) {
         meme++
         if (meme == 1) {
             setTimeout(function () {
@@ -144,6 +145,30 @@ client.on('message', message => {
 
 
 
+    } else if (msg.startsWith(prefix + "unbox")){
+        var whichBoyNum = Math.floor(Math.random() * Math.floor(3));
+        var whichBoy;
+        switch (whichBoyNum){
+            case 0:
+                whichBoy = "Junaid"
+                break
+            case 1:
+                whichBoy = "Jahanzeb"
+                break
+            case 2:
+                whichBoy = "Umar"
+                break
+        }
+        if (whichBoy === lastBoy){
+            message.channel.send("Well that's boring... it's " + whichBoy + " again...")
+            lastBoy=whichBoy;
+        } else{
+            message.channel.send("Today's unboxer is... drum roll please...")
+            setTimeout(function() {
+                message.channel.send(whichBoy +"!!! This way! The [loot]box is awaiting your attention.")
+            }, 1000)
+            lastBoy=whichBoy;
+        }
     } else if (msg.startsWith(prefix + "ht")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1], 10);
