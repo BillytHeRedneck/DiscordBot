@@ -16,7 +16,7 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    const channel = client.channels.cache.get('688827517913530565')
+    const channel = client.channels.cache.get('689207643151270137')
     
     var j = schedule.scheduleJob("0 0 * * *", function(){
         //if(dailyMeme==0) {
