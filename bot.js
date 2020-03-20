@@ -166,12 +166,12 @@ client.on('message', message => {
         if (whichBoy === lastBoy){
             setTimeout(function(){
                 message.channel.send("Well that's boring... it's " + whichBoy + " again...")
-            },1000)
+            }, 3000)
             lastBoy=whichBoy;
         } else{
             setTimeout(function() {
                 message.channel.send(whichBoy +"!!! This way! The [loot]box is awaiting your attention.")
-            }, 1000)
+            }, 3000)
             lastBoy=whichBoy;
         }
     } else if (msg.startsWith(prefix + "ht")) {
