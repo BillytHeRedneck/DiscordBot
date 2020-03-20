@@ -10,7 +10,7 @@ var lastBoy = "Junaid"
 
 
 client.once('ready', () => {
-    console.log('Bot is logged in!!')
+    console.log('Bot is logged in!')
 })
 
 client.on('ready', () => {
@@ -146,6 +146,7 @@ client.on('message', message => {
 
 
     } else if (msg.startsWith(prefix + "unbox")){
+        message.channel.send("Last unboxing, the unboxer was " + lastBoy)
         var whichBoyNum = Math.floor(Math.random() * Math.floor(3));
         var whichBoy;
         switch (whichBoyNum){
