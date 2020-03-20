@@ -26,7 +26,13 @@ client.on('ready', () => {
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {
         dailyMeme == 0
     })
-
+    var dailyMemeCheck = schedule.scheduleJob("30 18 * * 1-5", function () {
+        if (dailyMeme == 0) {
+            const channel = client.channels.cache.get('688827517913530565')
+            channel.send("Sure is lonely around here... wish I had a meme")
+            dailyMeme++
+        }
+    })
 })
 
 
@@ -117,7 +123,7 @@ client.on('message', message => {
         message.channel.send({ files: ["./Images/HeheBoy.gif"] })
 
     //meme-a-day
-    } else if (message.channel.id == 570344442255376387) {
+    } else if (message.channel.id == 688827517913530565) {
         meme++
         if (meme == 1) {
             setTimeout(function () {
