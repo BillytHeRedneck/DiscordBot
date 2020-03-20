@@ -170,7 +170,7 @@ client.on('message', message => {
             lastBoy=whichBoy;
         } else{
             setTimeout(function() {
-                message.channel.send(whichBoy +"!!! This way! The [loot]box is awaiting your attention.")
+                message.channel.send(whichBoy +"!!! This way! The [loot]box is awaiting your attention!")
             }, 3000)
             lastBoy=whichBoy;
         }
