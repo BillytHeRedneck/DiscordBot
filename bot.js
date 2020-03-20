@@ -5,10 +5,14 @@ const { prefix, prefix2, token } = require('./config.json');
 const client = new Discord.Client();
 let meme = 0;
 let dailyMeme = 0
-var lastBoy = "Junaid"
+var lastBoy
 
+//setter for unboxing
+function setLastBoy(name){
+    lastBoy=name;
+}
 
-
+//scheduled message for meme-a-day
 client.once('ready', () => {
     console.log('Bot is logged in!')
 })
@@ -119,6 +123,7 @@ client.on('message', message => {
 
     //meme-a-day
     } else if (message.channel.id == 570344442255376387) {
+        
         meme++
         if (meme == 1) {
             setTimeout(function () {
@@ -130,9 +135,11 @@ client.on('message', message => {
         }
 
     //OTHER
+    //time
     } else if (msg.startsWith(prefix + "time")) {
         message.channel.send("Hello Traveler. The time is " + moment().tz("America/New_York").format("h:mm A"))
 
+    //random number generator
     } else if (msg.startsWith(prefix + "rnd")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1], 10);
@@ -144,7 +151,7 @@ client.on('message', message => {
         }
 
 
-
+    //unbox
     } else if (msg.startsWith(prefix + "unbox")){
         message.channel.send("Last unboxing, the unboxer was " + lastBoy)
         setTimeout(function(){
@@ -167,13 +174,21 @@ client.on('message', message => {
             setTimeout(function(){
                 message.channel.send("Well that's boring... it's " + whichBoy + " again...")
             }, 3000)
-            lastBoy=whichBoy;
+            setLastBoy(whichBoy)
         } else{
             setTimeout(function() {
                 message.channel.send(whichBoy +"!!! This way! The [loot]box is awaiting your attention!")
             }, 3000)
-            lastBoy=whichBoy;
+            setLastBoy(whichBoy)
         }
+
+    //setter for lastBoy
+    } else if(msg.startsWith(prefix + "setBoy")){    
+        const args = msg.slice(prefix.length).split(' ');
+        setLastBoy(args[1])
+        message.channel.send("The last unboxer has been set to " + lastBoy)
+        
+    //heads or tails
     } else if (msg.startsWith(prefix + "ht")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1], 10);
