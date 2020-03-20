@@ -17,11 +17,11 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     const channel = client.channels.cache.get('688827517913530565')
-    channel.send("I AM ALIVE")
-    const j = schedule.scheduleJob("35 * * * *", function(){
+    
+    const j = schedule.scheduleJob("44 20 * * *", function(){
         //if(dailyMeme==0) {
         //const channel = 688827517913530565
-        channel.send("lonely around here")
+        channel.send("20")
         dailyMeme++
         //}
       })
@@ -43,10 +43,15 @@ client.on('ready', () => {
         }
     },60*1000)
     */
-   channel.send("before u")
-   var u = schedule.scheduleJob("36", function(){
+   var u = schedule.scheduleJob("44 19 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("Reset dailyMeme")
+    channel.send("19")
+    dailyMeme==0
+  })
+
+  var v = schedule.scheduleJob("44 21 * * *", function(){
+    //const channel = 688827517913530565
+    channel.send("21")
     dailyMeme==0
   })
 })
