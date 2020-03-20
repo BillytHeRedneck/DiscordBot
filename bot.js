@@ -17,7 +17,7 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     
-    const j = schedule.scheduleJob("51 18 * * 1-5", function(){
+    const j = schedule.scheduleJob("13 20 * * 4", function(){
         //if(dailyMeme==0) {
         const channel = 688827517913530565
         channel.send("lonely around here")
