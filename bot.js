@@ -27,7 +27,7 @@ client.on('ready', () => {
         dailyMeme == 0
     })
 
-    var dailyMemeCheck = schedule.scheduleJob("34 18 * * 1-5", function () {
+    var dailyMemeCheck1 = schedule.scheduleJob("34 18 * * 1-5", function () {
         
             const channel = client.channels.cache.get('688827517913530565')
             channel.send("Sure is lonely around here... wish I had a meme")
