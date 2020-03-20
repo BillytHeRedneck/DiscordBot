@@ -100,9 +100,9 @@ client.on('ready', () => {
     channel.send("15, the time is " + moment().tz("America/New_York").format("HH:mm"))
     dailyMeme==0
   })
-  var l = schedule.scheduleJob("3 16 * * *", function(){
+  var l = schedule.scheduleJob("6 16 * * *", function(){
     //const channel = 688827517913530565
-    channel.send("16, the time is " + moment().tz("America/New_York").format("HH:mm"))
+    channel.send("16, the time is " + moment().tz("America/New_York").format("HH:mmA"))
     dailyMeme==0
   })
   var m = schedule.scheduleJob("0 17 * * *", function(){
