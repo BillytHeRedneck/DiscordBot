@@ -130,7 +130,7 @@ client.on('message', message => {
 
     //OTHER
     } else if (msg.startsWith(prefix + "time")) {
-        message.channel.send("Hello Traveler. The time is " + moment().tz("America/New_York").format("hh:mm A"))
+        message.channel.send("Hello Traveler. The time is " + moment().tz("America/New_York").format("h:mm A"))
 
     } else if (msg.startsWith(prefix + "rnd")) {
         const args = msg.slice(prefix.length).split(' ');
