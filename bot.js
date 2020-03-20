@@ -18,7 +18,7 @@ client.once('ready', () => {
 client.on('ready', () => {
     const channel = client.channels.cache.get('688827517913530565')
     
-    var j = schedule.scheduleJob("0 0 * * *", function(){
+    var j = schedule.scheduleJob("0 0 * * 1-5", function(){
         if(dailyMeme==0) {
             channel.send("Sure is lonely around here... wish I had a meme")
             dailyMeme++
@@ -131,7 +131,7 @@ client.on('ready', () => {
   })
   var l5 = schedule.scheduleJob("29 16 * * 1-5", function(){
     if(dailyMeme==0) {
-        channel.send("Day: 5")
+        message.channel.send("Hello Traveler. The time is " + moment().tz("America/New_York").format("HH:mm A"))
         dailyMeme++
     }
   })
@@ -282,7 +282,7 @@ client.on('message', message=> {
         
         
     //meme-a-day
-    } else if (message.channel.id == 688827517913530565){
+    } else if (message.channel.id == 570344442255376387){
         meme++
         if(meme==1){
         setTimeout(function(){
@@ -293,7 +293,10 @@ client.on('message', message=> {
         
     } 
     //OTHER
-     } else if (msg.startsWith(prefix +"rnd")) {
+    } else if (msg.startsWith(prefix +"time")){
+        message.channel.send("Hello Traveler. The time is " + moment().tz("America/New_York").format("HH:mm A"))
+    
+    } else if (msg.startsWith(prefix +"rnd")) {
         const args = msg.slice(prefix.length).split(' ');
         var num = parseInt(args[1],10);
         var willIWork = Math.floor(Math.random() * Math.floor(2));
@@ -393,5 +396,8 @@ hours -> real life time
 1->21
 2->22
 3->23
+
+Day -> Day
+5-> Friday
 */
     
