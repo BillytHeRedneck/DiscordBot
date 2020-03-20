@@ -113,6 +113,8 @@ client.on('message', message => {
     } else if (msg.startsWith(prefix + "devilno")) {
         message.channel.send({ files: ["./Images/Yeah...no.gif"] })
 
+    } else if (msg.startsWith(prefix + "hehe")){
+        message.channel.send({ files: ["./Images/HeheBoy.gif"] })
 
     //meme-a-day
     } else if (message.channel.id == 570344442255376387) {
