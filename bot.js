@@ -21,7 +21,7 @@ client.on('ready', () => {
     const j = schedule.scheduleJob("0 0 * * *", function(){
         //if(dailyMeme==0) {
         //const channel = 688827517913530565
-        channel.send("0")
+        channel.send("00")
         dailyMeme++
         //}
       })
