@@ -16,7 +16,7 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
-    const channel = client.channels.cache.get('570344442255376387')
+    const channel = client.channels.cache.get('688827517913530565')
     
     var j = schedule.scheduleJob("0 0 * * *", function(){
         //if(dailyMeme==0) {
@@ -100,10 +100,14 @@ client.on('ready', () => {
     channel.send("15, the time is " + moment().tz("America/New_York").format("HH:mm"))
     dailyMeme==0
   })
-  var l = schedule.scheduleJob("15 16 * * *", function(){
+  var l = schedule.scheduleJob("20 16 * * *", function(){
+      if (dailyMeme==0){
+
+      
     //const channel = 688827517913530565
-    channel.send("Hello traveler. This is a test. The time is " + moment().tz("America/New_York").format("HH:mmA"))
+    channel.send("Sure is lonely around here. Wish I had a meme... The time is " + moment().tz("America/New_York").format("HH:mmA"))
     dailyMeme==0
+      }
   })
   var m = schedule.scheduleJob("0 17 * * *", function(){
     //const channel = 688827517913530565
