@@ -129,9 +129,9 @@ client.on('ready', () => {
         dailyMeme++
     }
   })
-  var l5 = schedule.scheduleJob("41 16 * * 1-5", function(){
+  var l5 = schedule.scheduleJob("45 16 * * 1-5", function(){
     if(dailyMeme==0) {
-        message.channel.send("Hello Traveler. The time is " + moment().tz("America/New_York").format("HH:mm A"))
+        channel.send("Hello Traveler. The time is " + moment().tz("America/New_York").format("HH:mm A"))
         dailyMeme++
     }
   })
