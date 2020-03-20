@@ -197,8 +197,8 @@ client.on('message', message => {
     //getter for lastBoy
     } else if (msg.startsWith(prefix + "getboy")){
         if(lastBoy == undefined){
-            message.channel.send("I don't know who the last uboxer was :cry: " +
-            "Please don't shoot me, please don't shoot me, please don't shoot me!")
+            message.channel.send("I don't know who the last uboxer was :cry: ")
+            message.channel.send("Please don't shoot me, please don't shoot me, please don't shoot me!")
         } else
         message.channel.send("The last unboxer was " + lastBoy)
          
