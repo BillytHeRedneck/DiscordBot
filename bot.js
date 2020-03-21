@@ -27,8 +27,8 @@ client.on('ready', () => {
             dailyMeme++
         }
     })
-    var dailyMemeReminder1 = schedule.scheduleJob("36 16 * * 1-5", function () {
-        channel1.send("1-5 " + moment().tz("America/New_York").format("h:mm A"))
+    var dailyMemeReminder1 = schedule.scheduleJob("39 16 * * 4,5,6", function () {
+        channel1.send("4,5,6 " + moment().tz("America/New_York").format("h:mm A"))
     })
    
 
@@ -47,7 +47,6 @@ client.on('message', message => {
     //Help
     else if (msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
-        message.channel.send(dailyMeme)
 
         //GIF
     } else if (msg.startsWith(prefix + "eric")) {
