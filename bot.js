@@ -28,7 +28,7 @@ client.on('ready', () => {
         }
     })
     var dailyMemeReminder1 = schedule.scheduleJob("0 17 * * 4,5,6", function () {
-        channel1.send("4,5,6 " + moment().tz("America/New_York").format("h:mm A"))
+        channel1.send("IT WORKED, AND THE TIME IS " + moment().tz("America/New_York").format("h:mm A"))
     })
    
 
