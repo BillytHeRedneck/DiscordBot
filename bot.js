@@ -43,7 +43,7 @@ client.on('message', message => {
     //Help
     else if (msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
-
+        message.channel.send(dailyMeme)
 
         //GIF
     } else if (msg.startsWith(prefix + "eric")) {
