@@ -23,43 +23,14 @@ client.on('ready', () => {
     var dailyMemeReminder = schedule.scheduleJob("0 0 * * *", function () {
         if (dailyMeme == 0) {
             const channel = client.channels.cache.get('570344442255376387')
-            channel1.send("Sure is lonely around here... wish I had a meme.")
+            channel.send("Sure is lonely around here... wish I had a meme.")
             dailyMeme++
         }
     })
-    var dailyMemeReminder1 = schedule.scheduleJob("33 1 * * *", function () {
-        channel1.send("* " + moment().tz("America/New_York").format("h:mm A"))
+    var dailyMemeReminder1 = schedule.scheduleJob("30 16 * * 6", function () {
+        channel1.send("1 " + moment().tz("America/New_York").format("h:mm A"))
     })
-    var dailyMemeReminder999 = schedule.scheduleJob("33 1 * * 1-5", function () {
-        channel1.send("1-5 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder2 = schedule.scheduleJob("0 2 * * *", function () {
-        channel1.send("2 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder3 = schedule.scheduleJob("0 3 * * *", function () {
-        channel1.send("3 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder4 = schedule.scheduleJob("0 4 * * *", function () {
-        channel1.send("4 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder5 = schedule.scheduleJob("0 5 * * *", function () {
-        channel1.send("5 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder6 = schedule.scheduleJob("0 6 * * *", function () {
-        channel1.send("6 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder7 = schedule.scheduleJob("0 7 * * *", function () {
-        channel1.send("7 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder8 = schedule.scheduleJob("0 8 * * *", function () {
-        channel1.send("8 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder9 = schedule.scheduleJob("0 9 * * *", function () {
-        channel1.send("9 " + moment().tz("America/New_York").format("h:mm A"))
-    })
-    var dailyMemeReminder10 = schedule.scheduleJob("0 10 * * *", function () {
-        channel1.send("10 " + moment().tz("America/New_York").format("h:mm A"))
-    })
+   
 
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {
         dailyMeme == 0
