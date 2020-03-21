@@ -19,42 +19,14 @@ client.once('ready', () => {
 
 client.on('ready', () => {
 
-
-    var dailyMemeReminder = schedule.scheduleJob("03 16 * * *", function () {
+    var dailyMemeReminder5 = schedule.scheduleJob("10 1 * * *", function () {
         if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('688827517913530565')
-            channel.send("16Sure is lonely around here... wish I had a meme")
-            dailyMeme++
-        }
-    })
-    var dailyMemeReminder1 = schedule.scheduleJob("3 21 * * *", function () {
-        if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('688827517913530565')
-            channel.send("21Sure is lonely around here... wish I had a meme")
-            dailyMeme++
-        }
-    })
-    var dailyMemeReminder2 = schedule.scheduleJob("3 19 * * *", function () {
-        if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('688827517913530565')
-            channel.send("19Sure is lonely around here... wish I had a meme")
-            dailyMeme++
-        }
-    })
-    var dailyMemeReminder3 = schedule.scheduleJob("3 1 * * *", function () {
-        if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('688827517913530565')
+            const channel = client.channels.cache.get('570344442255376387')
             channel.send("1Sure is lonely around here... wish I had a meme")
             dailyMeme++
         }
     })
-    var dailyMemeReminder4 = schedule.scheduleJob("3 0 * * *", function () {
-        if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('688827517913530565')
-            channel.send("1Sure is lonely around here... wish I had a meme")
-            dailyMeme++
-        }
-    })
+    
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {
         dailyMeme == 0
     })
