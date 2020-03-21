@@ -27,11 +27,11 @@ client.on('ready', () => {
             dailyMeme++
         }
     })
-    var dailyMemeReminder1 = schedule.scheduleJob("27 1 * * *", function () {
-        channel1.send("1 " + moment().tz("America/New_York").format("h:mm A"))
+    var dailyMemeReminder1 = schedule.scheduleJob("33 1 * * *", function () {
+        channel1.send("* " + moment().tz("America/New_York").format("h:mm A"))
     })
-    var dailyMemeReminder999 = schedule.scheduleJob("27 1 * * 1-5", function () {
-        channel1.send("1 " + moment().tz("America/New_York").format("h:mm A"))
+    var dailyMemeReminder999 = schedule.scheduleJob("33 1 * * 1-5", function () {
+        channel1.send("1-5 " + moment().tz("America/New_York").format("h:mm A"))
     })
     var dailyMemeReminder2 = schedule.scheduleJob("0 2 * * *", function () {
         channel1.send("2 " + moment().tz("America/New_York").format("h:mm A"))
