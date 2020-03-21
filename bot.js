@@ -27,7 +27,7 @@ client.on('ready', () => {
             dailyMeme++
         }
     })
-    var dailyMemeReminder2 = schedule.scheduleJob("0 23 * * 6", function () {
+    var dailyMemeReminder2 = schedule.scheduleJob("4 23 * * 0,6", function () {
         if (dailyMeme == 0) {
             const channel = client.channels.cache.get('570344442255376387')
             channel1.send("Sure is lonely arou - Wrong day. Carry on.")
