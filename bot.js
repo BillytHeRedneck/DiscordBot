@@ -18,27 +18,18 @@ client.once('ready', () => {
 })
 
 client.on('ready', () => {
+    const channel = client.channels.cache.get('570344442255376387')
     const channel1 = client.channels.cache.get('688827517913530565')
-
     var dailyMemeReminder = schedule.scheduleJob("0 0 * * 1,2,3,4,5", function () {
         if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('570344442255376387')
             channel.send("Sure is lonely around here... wish I had a meme.")
             dailyMeme++
         }
     })
-    var dailyMemeReminder2 = schedule.scheduleJob("4 23 * * 0,6", function () {
-        if (dailyMeme == 0) {
-            const channel = client.channels.cache.get('570344442255376387')
-            channel1.send("Sure is lonely arou - Wrong day. Carry on.")
-            dailyMeme++
-        }
+    var dailyMemeReminderWeekend = schedule.scheduleJob("17 0 * * 0,6", function () {    
+            channel1.send("Sure is lonely arou - Wrong day. Carry on.")  
     })
-    var dailyMemeReminder1 = schedule.scheduleJob("0 17 * * 4,5,6", function () {
-        channel1.send("IT WORKED, AND THE TIME IS " + moment().tz("America/New_York").format("h:mm A"))
-    })
-   
-
+    
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {
         dailyMeme == 0
     })
@@ -55,7 +46,7 @@ client.on('message', message => {
     else if (msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
 
-        //GIF
+    //GIF
     } else if (msg.startsWith(prefix + "eric")) {
         message.channel.send({ files: ["./Images/Eric Andre Unimpressed.gif"] })
 
@@ -303,4 +294,5 @@ hours -> real life time
 
 Day -> Day
 5-> Friday
+6-> Saturday
 */
