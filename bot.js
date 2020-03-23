@@ -17,11 +17,12 @@ function setLastBoy(name){
     lastBoy=name;
 }
 
-//scheduled message for meme-a-day
+
 client.once('ready', () => {
     console.log('Bot is logged in!')
 })
-
+/*
+//scheduled message for meme-a-day
 client.on('ready', () => {
     const channel = client.channels.cache.get('570344442255376387')
     const channel1 = client.channels.cache.get('688827517913530565')
@@ -43,7 +44,7 @@ client.on('ready', () => {
     })
 
 })
-
+*/
 
 client.on('message', message => {
     let ight = message.content.split(" ")
