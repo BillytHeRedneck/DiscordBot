@@ -56,7 +56,7 @@ client.on('message', message => {
     } catch(e){
         message.channel.send("I caught a million switching lanes... tHat part")
     }
-/*
+
 
     msg = message.content.toLowerCase()
     if (message.author.bot) return;
@@ -257,7 +257,7 @@ client.on('message', message => {
                 person.roles.remove(role.id);
                 message.channel.send("Rebooted!!")
             }, 10000);
-            ACTUAL ENDING FOR COMMENT SHOULD GO HERE!!!!!!!!!!!!!!!!
+            ACTUAL ENDING FOR COMMENT SHOULD GO HERE!!!!!!!!!!!!!!!! */
         } else {
             for (var i = 1; i <= num; i++) {
                 var rand = Math.floor(Math.random() * Math.floor(2));
@@ -279,7 +279,7 @@ client.on('message', message => {
             }
         }
     }
-*/
+
 })
 
 client.login(token);
