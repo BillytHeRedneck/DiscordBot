@@ -46,12 +46,12 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-    let arguments = message.content.split(" ")
-    let command = arguments[0]
+    let ight = message.content.split(" ")
+    let command = ight[0]
     let cmd = CH.getCommand(command)
     if(!cmd) return;
     try{
-        cmd.run(client,message,arguments)
+        cmd.run(client,message,ight)
     } catch(e){
         message.channel.send("I caught a million switching lanes... tHat part")
     }
