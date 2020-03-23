@@ -4,7 +4,7 @@ module.exports = class gif {
         this.alias = ['g']
         this.usage = '!gif'
     }
-    run(client,message,arguments){
+    run(client,message,ight){
         message.channel.send("I will now send a gif somehow")
     }
 }
