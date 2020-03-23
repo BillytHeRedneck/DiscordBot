@@ -49,6 +49,19 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.author.bot) return;
     msg = message.content.toLowerCase()
+    if (message.channel.id == 688827517913530565) {
+        
+        meme++
+        if (meme == 1) {
+            setTimeout(function () {
+                message.channel.send("Seeya next time!")
+                meme = 0;
+                dailyMeme++
+            }, 1500)
+
+        }
+        return
+    }
     let ight = msg.split(" ")
     let command = ight[0]
     let cmd = CH.getCommand(command)
@@ -59,7 +72,7 @@ client.on('message', message => {
     try{
         cmd.run(client,message,ight)
     } catch(e){
-        message.channel.send("I caught a million switching lanes... tHat part")
+        message.channel.send("I caught a million switching lanes... tHat part AKA ERROR")
     }
 
 
@@ -70,7 +83,7 @@ client.on('message', message => {
     //Help
     else if (msg.startsWith(prefix + "help")) {
         message.channel.send("Greetings Traveller! There are new gif-commands available at the Fyrestone Bounty-board!")
-
+/*
     //GIF
     } else if (msg.startsWith(prefix + "eric")) {
         message.channel.send({ files: ["./Images/Eric Andre Unimpressed.gif"] })
@@ -146,7 +159,7 @@ client.on('message', message => {
 
     } else if (msg.startsWith(prefix + "hehe")){
         message.channel.send({ files: ["./Images/HeheBoy.gif"] })
-
+*/
     //meme-a-day
     } else if (message.channel.id == 570344442255376387) {
         
