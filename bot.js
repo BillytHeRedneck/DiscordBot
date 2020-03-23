@@ -21,7 +21,7 @@ function setLastBoy(name){
 client.on('ready', () => {
     console.log('Bot is logged in!')
 })
-/*
+
 //scheduled message for meme-a-day
 client.on('ready', () => {
     const channel = client.channels.cache.get('570344442255376387')
@@ -44,7 +44,7 @@ client.on('ready', () => {
     })
 
 })
-*/
+
 
 client.on('message', message => {
     if (message.author.bot) return;
