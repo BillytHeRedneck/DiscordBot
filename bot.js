@@ -3,6 +3,10 @@ var schedule = require('node-schedule');
 const Discord = require('discord.js');
 const { prefix, prefix2, token } = require('./config.json');
 const client = new Discord.Client();
+const { CommandHandler } = require('djs-commands')
+const CH = new CommandHandler({
+    folder: __dirname + "/commands"
+})
 let meme = 0;
 let dailyMeme = 0
 var lastBoy
@@ -41,9 +45,20 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
+    let arguments = message.content.split(" ")
+    let command = arguments[0]
+    let cmd = CH.getCommand(command)
+    if(!cmd) return;
+    try{
+        cmd.run(client,message,arguments)
+    } catch(e){
+        message.channel.send("I caught a million switching lanes... tHat part")
+    }
+
 
     msg = message.content.toLowerCase()
     if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
 
     //Help
     else if (msg.startsWith(prefix + "help")) {
