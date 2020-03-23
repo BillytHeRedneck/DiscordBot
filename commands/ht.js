@@ -1,8 +1,8 @@
 module.exports = class ht {
     constructor(){
-        this.name = 'gif'
-        this.alias = ['g']
-        this.usage = '!gif'
+        this.name = 'ht'
+        this.alias = ['h']
+        this.usage = '!ht'
     }
     run(client,message,ight){
         var willIWork = Math.floor(Math.random() * Math.floor(2));
