@@ -76,6 +76,7 @@ client.on('message', message => {
         cmd.run(client,message,ight)
     } catch(e){
         message.channel.send("I caught a million switching lanes... tHat part AKA ERROR")
+        message.channel.send("The error is " + e)
     }
 
 
