@@ -9,7 +9,7 @@ module.exports = class ht {
         var counter = 0;
         if (willIWork == 0) {
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working!")
-            return
+            break
         } else {
             for (var i = 1; i <= ight[1]; i++) {
                 var rand = Math.floor(Math.random() * Math.floor(2));

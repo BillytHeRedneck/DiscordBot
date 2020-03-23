@@ -71,7 +71,7 @@ client.on('message', message => {
         message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.")
         return
     } 
-    
+
     try{
         cmd.run(client,message,ight)
     } catch(e){
