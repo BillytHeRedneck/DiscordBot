@@ -19,7 +19,6 @@ client.once('ready', () => {
 
 client.on('ready', () => {
     const channel = client.channels.cache.get('570344442255376387')
-    const channel1 = client.channels.cache.get('688827517913530565')
     var dailyMemeReminder = schedule.scheduleJob("0 0 * * 2,3,4,5", function () {
         if (dailyMeme == 0) {
             channel.send("Sure is lonely around here... wish I had a meme.")
