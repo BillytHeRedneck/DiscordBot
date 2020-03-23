@@ -5,6 +5,6 @@ module.exports = class gif {
         this.usage = '!gif'
     }
     run(client,message,ight){
-        message.channel.send("I will now send a gif somehow and ight: " + ight)
+        message.channel.send("I will now send a gif somehow and ight[1]: " + ight[1])
     }
 }
