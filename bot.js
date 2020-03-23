@@ -5,7 +5,8 @@ const { prefix, prefix2, token } = require('./config.json');
 const client = new Discord.Client();
 const { CommandHandler } = require('djs-commands')
 const CH = new CommandHandler({
-    folder: __dirname + "/commands"
+    folder: __dirname + "/commands",
+    prefix: ['!']
 })
 let meme = 0;
 let dailyMeme = 0
