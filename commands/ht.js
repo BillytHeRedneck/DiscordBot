@@ -7,11 +7,12 @@ module.exports = class ht {
     run(client,message,ight){
         var willIWork = Math.floor(Math.random() * Math.floor(2));
         var counter = 0;
+        var num = ight[1]
         if (willIWork == 0) {
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working!")
             
         } else {
-            for (var i = 1; i <= ight[1]; i++) {
+            for (var i = 1; i <= num; i++) {
                 var rand = Math.floor(Math.random() * Math.floor(2));
                 if (rand == 0) {
                     counter++;
