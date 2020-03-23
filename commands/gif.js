@@ -6,6 +6,8 @@ module.exports = class gif {
     }
     run(client,message,ight){
         message.channel.send("I will now send a gif somehow and ight[1]: " + ight[1])
+        const gifToSend = ight[1].toLowerCase()
+        message.channel.send("gifToSend: " + gifToSend)
         switch (ight[1]){
             case 'eric':
                 message.channel.send({ files: ["./Images/Eric Andre Unimpressed.gif"] })
