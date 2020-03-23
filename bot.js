@@ -18,7 +18,7 @@ function setLastBoy(name){
 }
 
 
-client.once('ready', () => {
+client.on('ready', () => {
     console.log('Bot is logged in!')
 })
 /*
