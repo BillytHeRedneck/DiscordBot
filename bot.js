@@ -50,6 +50,7 @@ client.on('message', message => {
     let ight = message.content.split(" ")
     let command = ight[0]
     let cmd = CH.getCommand(command)
+    ight[1].toLowerCase()
     if(!cmd) return;
     try{
         cmd.run(client,message,ight)
