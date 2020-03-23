@@ -56,7 +56,6 @@ client.on('message', message => {
         message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.")
         return
     } 
-    
     try{
         cmd.run(client,message,ight)
     } catch(e){
@@ -133,7 +132,7 @@ client.on('message', message => {
     } else if (msg.startsWith(prefix + "garretsmh")) {
         message.channel.send({ files: ["./Images/Garret Shake Head.gif"] })
 
-    } else if (msg.startsWith(prefix + "amazing...")) {
+    } else if (msg.startsWith(prefix + "amazing")) {
         message.channel.send({ files: ["./Images/Squidward Amazing.gif"] })
 
     } else if (msg.startsWith(prefix + "sweating")) {
