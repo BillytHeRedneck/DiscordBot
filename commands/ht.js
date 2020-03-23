@@ -9,7 +9,7 @@ module.exports = class ht {
         var counter = 0;
         if (willIWork == 0) {
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working!")
-            break
+            
         } else {
             for (var i = 1; i <= ight[1]; i++) {
                 var rand = Math.floor(Math.random() * Math.floor(2));
@@ -22,14 +22,14 @@ module.exports = class ht {
             message.channel.send("On " + num + " rolls, the winner is... ")
             if (counter > 0) {
                 message.channel.send({ files: ["./Images/Psycho Head.jpg"] })
-                return
+                
             } else if (counter < 0) {
                 message.channel.send({ files: ["./Images/Skag Tail.jpg"] })
-                return
+                
             } else {
                 message.channel.send("No one... what's this? I'm detecting a motor unit malfunction... I can't move! I'm paralyzed with fear!")
                 message.channel.send({ files: ["./Images/CL4P-TP Neutral.jpg"] })
-                return
+                
 
             }
         }
