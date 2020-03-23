@@ -47,11 +47,14 @@ client.on('ready', () => {
 */
 
 client.on('message', message => {
-    let ight = message.content.split(" ")
+    msg = message.content.toLowerCase()
+    let ight = msg.split(" ")
     let command = ight[0]
     let cmd = CH.getCommand(command)
-    ight[1].toLowerCase()
-    if(!cmd) return;
+    if(!cmd){
+        message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.")
+        return
+    } 
     try{
         cmd.run(client,message,ight)
     } catch(e){
