@@ -66,15 +66,28 @@ client.on('message', message => {
     let ight = msg.split(" ")
     let command = ight[0]
     let cmd = CH.getCommand(command)
+
     if(!cmd){
         message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.")
         return
     } 
+    
     try{
         cmd.run(client,message,ight)
     } catch(e){
         message.channel.send("I caught a million switching lanes... tHat part AKA ERROR")
     }
+
+
+
+
+
+
+
+
+
+
+
 
 
     msg = message.content.toLowerCase()
