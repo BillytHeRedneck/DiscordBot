@@ -65,6 +65,7 @@ client.on('message', async message => {
 	const commandName = args.shift().toLowerCase();
     const command = client.commands.get(commandName);
 */
+    let msg = message.content.toLowerCase()
     let ight = msg.split(" ")
     let command123 = ight[0]
     let cmd = CH.getCommand(command123)
