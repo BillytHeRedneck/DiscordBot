@@ -77,7 +77,7 @@ client.on('message', async message => {
 		cmd.run(message,ight);
 	} catch (error) {
 		console.error(error);
-		message.reply('There was an error trying to execute that command!');
+		message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.");
 	}
 });
 
