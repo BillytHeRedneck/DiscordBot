@@ -59,8 +59,25 @@ client.on('ready', () => {
 
 })
 
+client.on('message', async message => {
+	const args = message.content.slice(prefix.length).split(/ +/);
+	const commandName = args.shift().toLowerCase();
+	const command = client.commands.get(commandName);
 
+	if (message.author.bot) return;
+	if (!message.content.startsWith(prefix)) return;
+
+	try {
+		command.execute(message);
+	} catch (error) {
+		console.error(error);
+		message.reply('There was an error trying to execute that command!');
+	}
+});
+
+/*
 client.on('message', message => {
+    
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
     msg = message.content.toLowerCase()
@@ -77,7 +94,6 @@ client.on('message', message => {
         }
         return
     }
-    /*
     let ight = msg.split(" ")
     let command123 = ight[0]
     let cmd = CH.getCommand(command123)
