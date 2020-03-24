@@ -1,8 +1,11 @@
 const moment = require("moment-timezone");
 var schedule = require('node-schedule');
+
 const Discord = require('discord.js');
 const { prefix, prefix2, token } = require('./config.json');
+
 const Client = require('./client/Client');
+const fs = require('fs')
 const { CommandHandler } = require('djs-commands')
 const CH = new CommandHandler({
     folder: __dirname + "/commands/",
@@ -74,6 +77,7 @@ client.on('message', message => {
         }
         return
     }
+    /*
     let ight = msg.split(" ")
     let command123 = ight[0]
     let cmd = CH.getCommand(command123)
@@ -89,7 +93,7 @@ client.on('message', message => {
         message.channel.send("I caught a million switching lanes... tHat part AKA ERROR")
         message.channel.send("The error is " + e)
     }
-
+*/
 
 
 
