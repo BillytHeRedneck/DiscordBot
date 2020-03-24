@@ -1,4 +1,4 @@
-/*
+
 module.exports = class gif {
     constructor(){
         this.name = 'gif'
@@ -90,7 +90,7 @@ module.exports = class gif {
         }
     }
 }
-*/
+/*
 module.exports = {
 	name: 'gif',
 	description: 'Embed a gif!',
@@ -178,3 +178,4 @@ module.exports = {
         }
 	},
 };
+*/
