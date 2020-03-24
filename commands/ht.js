@@ -4,8 +4,8 @@ module.exports = class ht {
         this.alias = ['h']
         this.usage = '!ht'
     }
-    run(client, message, ight) {
-        
+    //run(client, message, ight) {
+    execute(message) { 
             var willIWork = Math.floor(Math.random() * Math.floor(2));
             var counter = 0;
             var num = ight[1]
