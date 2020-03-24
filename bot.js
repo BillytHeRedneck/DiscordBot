@@ -2,7 +2,7 @@ const moment = require("moment-timezone");
 var schedule = require('node-schedule');
 const Discord = require('discord.js');
 const { prefix, prefix2, token } = require('./config.json');
-const client = new Discord.Client();
+const Client = require('./client/Client');
 const { CommandHandler } = require('djs-commands')
 const CH = new CommandHandler({
     folder: __dirname + "/commands/",
@@ -361,4 +361,10 @@ Day -> Day
 6-> Saturday
 1-> Sunday
 1-> Monday
+
+
+
+
+//const client = new Discord.Client();
+
 */
