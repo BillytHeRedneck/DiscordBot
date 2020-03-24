@@ -1,4 +1,4 @@
-module.exports = class ht {
+module.exports = class rnd {
     constructor() {
         this.name = 'rnd'
         this.alias = ['r']
