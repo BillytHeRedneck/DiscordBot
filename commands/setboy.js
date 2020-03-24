@@ -5,7 +5,7 @@ module.exports = class setboy {
         this.usage = '!setboy'
     }
     run(message,ight) { 
-        import lastBoy from './Users/billytheredneck/Test/commands/unbox.js';
+        //import lastBoy from './Users/billytheredneck/Test/commands/unbox.js';
         setLastBoy(ight[1])
         message.channel.send("The last unboxer has been set to: " + lastBoy)
     }
