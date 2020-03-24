@@ -48,8 +48,8 @@ client.on('ready', () => {
     var dailyMemeReminderWeekend = schedule.scheduleJob("0 1 * * 6", function () {    
             channel.send("Sure is lonely arou - Wrong day. Carry on.")  
     })
-    var dailyMemeReminderWeekend1 = schedule.scheduleJob("24 18 * * 2", function () {    
-        channel1.send("Day 1 - Monday")  
+    var dailyMemeReminderWeekend1 = schedule.scheduleJob("27 18 * * 2", function () {    
+        channel1.send("Day 2 - Tuesday")  
 })
     
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {
