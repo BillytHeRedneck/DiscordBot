@@ -68,7 +68,7 @@ client.on('message', async message => {
 	if (!message.content.startsWith(prefix)) return;
 
 	try {
-		command.execute(message);
+		command.run(message);
 	} catch (error) {
 		console.error(error);
 		message.reply('There was an error trying to execute that command!');
