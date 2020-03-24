@@ -23,7 +23,7 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-console.log(client.commands);
+console.log("client.commands: "+ client.commands);
 
 //setter for unboxing
 function setLastBoy(name){
@@ -386,7 +386,7 @@ Day -> Day
 6-> Saturday
 1-> Sunday
 1-> Monday
-
+2-> Tuesday
 
 
 
