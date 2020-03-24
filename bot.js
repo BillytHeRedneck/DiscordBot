@@ -11,6 +11,17 @@ const CH = new CommandHandler({
 let meme = 0;
 let dailyMeme = 0
 var lastBoy
+const client = new Client();
+client.commands = new Discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
+	client.commands.set(command.name, command);
+}
+
+console.log(client.commands);
 
 //setter for unboxing
 function setLastBoy(name){
@@ -64,8 +75,8 @@ client.on('message', message => {
         return
     }
     let ight = msg.split(" ")
-    let command = ight[0]
-    let cmd = CH.getCommand(command)
+    let command123 = ight[0]
+    let cmd = CH.getCommand(command123)
 
     if(!cmd){
         message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.")
