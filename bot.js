@@ -109,7 +109,7 @@ client.on('message', message => {
         message.channel.send("I caught a million switching lanes... tHat part AKA ERROR")
         message.channel.send("The error is " + e)
     }
-*/
+
 
 
 
@@ -205,7 +205,7 @@ client.on('message', message => {
 
     } else if (msg.startsWith(prefix + "hehe")){
         message.channel.send({ files: ["./Images/HeheBoy.gif"] })
-*/
+                    PUT A BLOCK COMMENT ENDER HERE!!!!!!!!!
     //meme-a-day
     } else if (message.channel.id == 570344442255376387) {
         
@@ -321,7 +321,7 @@ client.on('message', message => {
                 person.roles.remove(role.id);
                 message.channel.send("Rebooted!!")
             }, 10000);
-            ACTUAL ENDING FOR COMMENT SHOULD GO HERE!!!!!!!!!!!!!!!! */
+            ACTUAL ENDING FOR COMMENT SHOULD GO HERE!!!!!!!!!!!!!!!! 
         } else {
             for (var i = 1; i <= num; i++) {
                 var rand = Math.floor(Math.random() * Math.floor(2));
@@ -345,7 +345,7 @@ client.on('message', message => {
     }
 
 })
-
+*/
 client.login(token);
 
 /*
