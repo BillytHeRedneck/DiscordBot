@@ -6,7 +6,7 @@ module.exports = class gif {
         this.usage = '!gif'
     }
     //run(client,message,ight){
-    run(message) { 
+    run(message,ight) { 
         switch (ight[1]){
             case 'eric':
                 message.channel.send({ files: ["./Images/Eric Andre Unimpressed.gif"] })

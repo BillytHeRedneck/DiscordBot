@@ -5,7 +5,7 @@ module.exports = class ht {
         this.usage = '!ht'
     }
     //run(client, message, ight) {
-    run(message) { 
+    run(message,ight) { 
             var willIWork = Math.floor(Math.random() * Math.floor(2));
             var counter = 0;
             var num = ight[1]
