@@ -93,7 +93,7 @@ module.exports = class gif {
 */
 module.exports = {
 	name: 'gif',
-	description: 'Embed a gif',
+	description: 'Embed a gif!',
 	execute(message) {
 		switch (ight[1]){
             case 'eric':
