@@ -1,4 +1,5 @@
 //export var lastBoy
+var lastBoy = require('lastBoy')
 module.exports = class unbox {
     constructor() {
         this.name = 'unbox'
