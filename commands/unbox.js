@@ -1,7 +1,7 @@
 module.exports = class unbox {
     constructor() {
         this.name = 'unbox'
-        this.alias = ['u']
+        this.alias = ['unbox']
         this.usage = '!unbox'
     }
     run(message,ight) { 

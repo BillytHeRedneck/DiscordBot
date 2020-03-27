@@ -1,7 +1,7 @@
 module.exports = class ht {
     constructor() {
         this.name = 'ht'
-        this.alias = ['h']
+        this.alias = ['ht']
         this.usage = '!ht'
     }
     //run(client, message, ight) {

@@ -3,7 +3,7 @@ const moment = require("moment-timezone");
 module.exports = class time {
     constructor() {
         this.name = 'time'
-        this.alias = ['t']
+        this.alias = ['time']
         this.usage = '!time'
     }
     run(message,ight) { 

@@ -1,7 +1,7 @@
 module.exports = class rnd {
     constructor() {
         this.name = 'rnd'
-        this.alias = ['r']
+        this.alias = ['rnd']
         this.usage = '!rnd'
     }
     run(message,ight) { 

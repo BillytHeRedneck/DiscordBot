@@ -2,7 +2,7 @@
 module.exports = class gif {
     constructor(){
         this.name = 'gif'
-        this.alias = ['g']
+        this.alias = ['gif']
         this.usage = '!gif'
     }
     //run(client,message,ight){
