@@ -12,6 +12,7 @@ module.exports = class rnd {
             muted = true
                 setTimeout(function (){
                     muted=false
+                    message.channel.send("Rebooted!")
                 }, 5000)
         } else {
             message.channel.send("Your random number is... " + (Math.floor(Math.random() * Math.floor(num)) + 1) )

@@ -14,6 +14,7 @@ module.exports = class ht {
                 muted = true
                 setTimeout(function (){
                     muted=false
+                    message.channel.send("Rebooted!")
                 }, 5000)
             } else {
                 for (var i = 1; i <= num; i++) {
