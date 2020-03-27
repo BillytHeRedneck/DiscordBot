@@ -1,8 +1,8 @@
 module.exports = class time {
     constructor() {
-        this.name = 'die'
+        this.name = 'dice'
         this.alias = ['d']
-        this.usage = '!die'
+        this.usage = '!dice'
     }
     run(message,ight) { 
         var roll = Math.floor(Math.random() * Math.floor(6)) + 1;
