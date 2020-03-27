@@ -10,7 +10,9 @@ module.exports = class setboy {
         lastBoy = ight[1]
         message.channel.send("The last unboxer has been set to: " + lastBoy)
     }
+    /*
     setLastBoy(name){
         lastBoy=name;
     }
+    */
 }

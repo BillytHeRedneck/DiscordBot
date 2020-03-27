@@ -26,10 +26,11 @@ for (const file of commandFiles) {
 console.log(client.commands);
 
 //setter for unboxing
-function setLastBoy(name){
+/*
+setLastBoy(name){
     lastBoy=name;
 }
-
+*/
 
 client.on('ready', () => {
     console.log('Bot is logged in!')
@@ -48,8 +49,8 @@ client.on('ready', () => {
     var dailyMemeReminderWeekend = schedule.scheduleJob("0 1 * * 6", function () {    
             channel.send("Sure is lonely arou - Wrong day. Carry on.")  
     })
-    var dailyMemeReminderWeekend1 = schedule.scheduleJob("33 1 * * 3", function () {    
-        channel1.send("Day 3 - Thursday")  
+    var dailyMemeReminderWeekend1 = schedule.scheduleJob("38 1 * * 5", function () {    
+        channel1.send("Day 5 - Thursday")  
 })
     
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {

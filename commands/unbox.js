@@ -5,7 +5,7 @@ module.exports = class unbox {
         this.usage = '!unbox'
     }
     run(message,ight) { 
-        if (lastBoy == undefined){
+        if (lastBoy == 'undefined'){
             message.channel.send("I just searched my records and I cannot seem to find who the last unboxer was." +
             " You should set it next time by calling !setboy but anyway, ONTO THE UNBOXING!")
         } else {
