@@ -9,7 +9,6 @@ module.exports = class unbox {
             message.channel.send("I just searched my records and I cannot seem to find who the last unboxer was." +
             " You should set it next time by calling !setboy but anyway, ONTO THE UNBOXING!")
         } else {
-            message.channel.send(lastBoy)
             message.channel.send("Last unboxing, the unboxer was " + lastBoy)
         }
         setTimeout(function(){
