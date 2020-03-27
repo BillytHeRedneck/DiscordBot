@@ -68,14 +68,14 @@ client.on('message', async message => {
     688827517913530565
     570344442255376387
 */
+    if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
     let msg = message.content.toLowerCase()
     let ight = msg.split(" ")
     let command123 = ight[0]
     let cmd = CH.getCommand(command123)
-	if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
     
-    if (message.channel.id == 688827517913530565) {
+    if (msg.channel.id == 688827517913530565) {
         message.channel.send(meme)
         meme++
         if (meme == 1) {
