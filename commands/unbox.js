@@ -31,15 +31,15 @@ module.exports = class unbox {
             setTimeout(function(){
                 message.channel.send("Well that's boring... it's " + whichBoy + " again...")
             }, 3000)
-            setLastBoy(whichBoy)
+            //setLastBoy(whichBoy)
+            lastBoy = whichBoy
         } else {
             setTimeout(function() {
                 message.channel.send(whichBoy +"!!! This way! The [loot]box is awaiting your attention!")
             }, 3000)
-            setLastBoy(whichBoy)
+            lastBoy = whichBoy
         }
+        
     }
-    setLastBoy(name){
-        lastBoy=name;
-    }
+    
 }
