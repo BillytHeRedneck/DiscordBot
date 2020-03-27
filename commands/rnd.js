@@ -10,7 +10,7 @@ module.exports = class rnd {
         if (willIWork == 0) {
             message.channel.send("These controls seem to be damaged! Have no fear, I’m sure I can do it! Arrgh...this isn't working!")
         } else {
-            message.channel.send("Your random number is... " + Math.floor(Math.random() * Math.floor(num)))
+            message.channel.send("Your random number is... " + (Math.floor(Math.random() * Math.floor(num)) + 1) )
         }
     }
 }
