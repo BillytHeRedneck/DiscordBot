@@ -6,7 +6,7 @@ module.exports = class ht {
     }
     //run(client, message, ight) {
     run(message,ight) { 
-            var willIWork = Math.floor(Math.random() * Math.floor(3));
+            var willIWork = Math.floor(Math.random() * Math.floor(5));
             var counter = 0;
             var num = ight[1]
             if (willIWork == 0) {
