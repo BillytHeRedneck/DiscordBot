@@ -68,7 +68,7 @@ client.on('message', async message => {
     688827517913530565
     570344442255376387
 */
-    if (msg.channel.id == 688827517913530565) {
+    if (message.channel.id == 688827517913530565) {
         if (message.author.bot) return;
         message.channel.send(meme)
         meme++
