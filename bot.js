@@ -13,6 +13,7 @@ const CH = new CommandHandler({
 let meme = 0;
 let dailyMeme = 0
 global.lastBoy = null
+global.muted = false
 const client = new Client();
 client.commands = new Discord.Collection();
 
@@ -24,11 +25,6 @@ for (const file of commandFiles) {
 }
 
 console.log(client.commands);
-
-//setter for unboxing
-function setLastBoy(name){
-    lastBoy=name;
-}
 
 
 client.on('ready', () => {
@@ -81,6 +77,10 @@ client.on('message', async message => {
     }
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
+    if (muted) {
+        message.channel.send("STOP, I AM REBOOTING")
+        return
+    }
 
     let msg = message.content.toLowerCase()
     let ight = msg.split(" ")
