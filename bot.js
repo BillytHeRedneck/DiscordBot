@@ -26,11 +26,10 @@ for (const file of commandFiles) {
 console.log(client.commands);
 
 //setter for unboxing
-/*
-setLastBoy(name){
+function setLastBoy(name){
     lastBoy=name;
 }
-*/
+
 
 client.on('ready', () => {
     console.log('Bot is logged in!')
