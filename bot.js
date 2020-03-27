@@ -76,7 +76,7 @@ client.on('message', async message => {
     if (!message.content.startsWith(prefix)) return;
     
     if (message.channel.id == 688827517913530565) {
-        
+        message.channel.send(meme)
         meme++
         if (meme == 1) {
             setTimeout(function () {
@@ -88,7 +88,7 @@ client.on('message', async message => {
         }
         return
     }
-    
+
 	try {
 		cmd.run(message,ight);
 	} catch (error) {
