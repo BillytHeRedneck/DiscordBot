@@ -70,7 +70,7 @@ client.on('message', async message => {
     688827517913530565
     570344442255376387
 */
-    if (message.channel.id == 688827517913530565 && message.attachments.size > 0) {
+    if (message.channel.id == 570344442255376387 && message.attachments.size > 0) {
         if (message.author.bot) return;
         meme++
         if (meme == 1) {
