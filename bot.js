@@ -69,13 +69,12 @@ client.on('message', async message => {
     570344442255376387
 */
     let msg = message.content.toLowerCase()
-   
     let ight = msg.split(" ")
     let command123 = ight[0]
     let cmd = CH.getCommand(command123)
-
 	if (message.author.bot) return;
-	if (!message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith(prefix)) return;
+    
     if (message.channel.id == 688827517913530565) {
         
         meme++
@@ -89,6 +88,7 @@ client.on('message', async message => {
         }
         return
     }
+    
 	try {
 		cmd.run(message,ight);
 	} catch (error) {
