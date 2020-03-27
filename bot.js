@@ -12,7 +12,7 @@ const CH = new CommandHandler({
 })
 let meme = 0;
 let dailyMeme = 0
-window.lastBoy
+global.lastBoy = ""
 const client = new Client();
 client.commands = new Discord.Collection();
 
