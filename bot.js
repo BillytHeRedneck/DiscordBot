@@ -48,7 +48,7 @@ client.on('ready', () => {
     var dailyMemeReminderWeekend = schedule.scheduleJob("0 1 * * 6", function () {    
             channel.send("Sure is lonely arou - Wrong day. Carry on.")  
     })
-    var dailyMemeReminderWeekend1 = schedule.scheduleJob("55 1 * * 5", function () {    
+    var dailyMemeReminderWeekend1 = schedule.scheduleJob("57 1 * * 5", function () {    
         if (dailyMeme == 0){
         channel1.send("Day 5 - Thursday")  
         }
@@ -65,9 +65,11 @@ client.on('message', async message => {
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
     const command = client.commands.get(commandName);
+    688827517913530565
+    570344442255376387
 */
     let msg = message.content.toLowerCase()
-    if (message.channel.id == 570344442255376387) {
+    if (message.channel.id == 688827517913530565) {
         
         meme++
         if (meme == 1) {
