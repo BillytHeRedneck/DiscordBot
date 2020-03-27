@@ -5,7 +5,7 @@ module.exports = class time {
         this.usage = '!help'
     }
     run(message,ight) { 
-        message.channel.send(">>>Allow me to introduce myself! I am a CL4P-TP steward bot," + 
+        message.channel.send("```Allow me to introduce myself! I am a CL4P-TP steward bot," + 
         " but my friends call me Claptrap! Or they would, if any of them were still alive. Or" +
         " had existed in the first place! Oh -- I've got something for you!")
         setTimeout(function() {
@@ -17,7 +17,7 @@ module.exports = class time {
             "**!time** will give you you the time\n" +
             "**!ht NUM** will flip a coin NUM amount of times and tell you the winner\n" +
             "**!rnd NUM** will give you a random number between 1 and NUM\n" +
-            "**!dice** will roll a dice and give you the result\n")
+            "**!dice** will roll a dice and give you the result\n```")
         }, 3000)
         
     }
