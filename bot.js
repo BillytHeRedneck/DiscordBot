@@ -48,9 +48,9 @@ client.on('ready', () => {
     var dailyMemeReminderWeekend = schedule.scheduleJob("0 1 * * 6", function () {    
             channel.send("Sure is lonely arou - Wrong day. Carry on.")  
     })
-    var dailyMemeReminderWeekend1 = schedule.scheduleJob("45 18 * * 6", function () {    
+    var dailyMemeReminderWeekend1 = schedule.scheduleJob("47 18 * * 5", function () {    
         if (dailyMeme == 0){
-        channel1.send("Day 6 - Friday")  
+        channel1.send("Day 5 - Friday")  
         } else {
             channel1.send("dailyMeme is: " + dailyMeme + ", so u beat me to it")
         }
@@ -81,13 +81,12 @@ client.on('message', async message => {
     }
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
+
     let msg = message.content.toLowerCase()
     let ight = msg.split(" ")
     let command123 = ight[0]
     let cmd = CH.getCommand(command123)
     
-    
-
 	try {
 		cmd.run(message,ight);
 	} catch (error) {
