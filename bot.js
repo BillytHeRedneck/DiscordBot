@@ -53,9 +53,10 @@ client.on('ready', () => {
             channel1.send("dailyMeme is: " + dailyMeme + ", so u beat me to it")
         }
 })
-const job = new CronJob('53 * * * *', function() {
+const job = new CronJob('56 * * * *', function() {
     channel1.send("USING CRON")
 });
+job.start();
     
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {
         dailyMeme == 0
