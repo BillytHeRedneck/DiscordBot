@@ -53,7 +53,7 @@ client.on('ready', () => {
             channel1.send("dailyMeme is: " + dailyMeme + ", so u beat me to it")
         }
 })
-const job = new CronJob('3 1 * * *', function() {
+const job = new CronJob('6 1 * * 0', function() {
     channel1.send("USING CRON - 1")
 });
 job.start();
