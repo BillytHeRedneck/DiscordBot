@@ -1,4 +1,5 @@
 var schedule = require('node-schedule');
+var CronJob = require('cron').CronJob;
 
 const Discord = require('discord.js');
 const { prefix, prefix2, token } = require('./config.json');
@@ -33,6 +34,7 @@ client.on('ready', () => {
 
 //scheduled message for meme-a-day
 client.on('ready', () => {
+    
     const channel = client.channels.cache.get('570344442255376387')
     const channel1 = client.channels.cache.get('568956723059228674')
     var dailyMemeReminder = schedule.scheduleJob("0 22 * * 1,2,3,4,5", function () {
@@ -51,6 +53,9 @@ client.on('ready', () => {
             channel1.send("dailyMeme is: " + dailyMeme + ", so u beat me to it")
         }
 })
+const job = new CronJob('48 20 * * *', function() {
+    channel1.send("USING CRON")
+});
     
     var dailyMemeReset = schedule.scheduleJob("0 4 * * *", function () {
         dailyMeme == 0
