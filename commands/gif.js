@@ -30,7 +30,8 @@ module.exports = class gif {
                 break
             case 'fistbump':
                 this.deleteTheMessage(message)
-                message.channel.send({ files: ["./Images/Fa-la-la-la-la.gif"] } + this.deleteTheMessage(message))
+                message.channel.send(this.deleteTheMessage(message), { files: ["./Images/Fa-la-la-la-la.gif"] })
+                //message.channel.send({ files: ["./Images/Fa-la-la-la-la.gif"] } + this.deleteTheMessage(message))
                 break
             case 'idk':
                 this.deleteTheMessage(message)
@@ -118,7 +119,8 @@ module.exports = class gif {
     deleteTheMessage(message){
         let messageAuthor = message.member.displayName
         message.delete(message);
-        message.channel.send(messageAuthor + " responds with: ")
+        return messageAuthor + " responds with: "
+        //message.channel.send(messageAuthor + " responds with: ")
     }
 }
 /*
