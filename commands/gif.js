@@ -29,9 +29,8 @@ module.exports = class gif {
                 message.channel.send({ files: ["./Images/Wrong.gif"] })
                 break
             case 'fistbump':
-                this.deleteTheMessage(message)
                 message.channel.send(this.deleteTheMessage(message), { files: ["./Images/Fa-la-la-la-la.gif"] })
-                //message.channel.send({ files: ["./Images/Fa-la-la-la-la.gif"] } + this.deleteTheMessage(message))
+                //message.channel.send({ files: ["./Images/Fa-la-la-la-la.gif"] })
                 break
             case 'idk':
                 this.deleteTheMessage(message)
