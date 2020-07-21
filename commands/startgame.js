@@ -7,9 +7,9 @@ module.exports = class gif {
     
     run(message,ight) { 
         message.channel.send(
-            "*1*  |  *2*  |  *3*" +
-            "*4*  |  *5*  |  *6*" +
-            "*7*  |  *8*  |  *9*"
+            "*1*  |  *2*  |  *3*\n" +
+            "*4*  |  *5*  |  *6*\n" +
+            "*7*  |  *8*  |  *9*\n"
         )
     }
 }
