@@ -84,7 +84,7 @@ module.exports = class gif {
                 message.channel.send({ files: ["./Images/HeheBoy.gif"] })
                 break
             case 'crunk':
-                message.channel.send({ files: ["./Images/CrunkAintDead.mp4"] })
+                message.channel.send({ files: ["./Images/CrunkAintDead.gif"] })
                 break
             default:
                 message.channel.send("I don't know that one. You either spelled it wrong" +
