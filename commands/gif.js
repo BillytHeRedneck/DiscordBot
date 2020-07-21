@@ -7,13 +7,14 @@ module.exports = class gif {
     }
     //run(client,message,ight){
     run(message,ight) { 
+        this.deleteTheMessage(message)
         switch (ight[1]){
             case 'eric':
-                this.deleteTheMessage(message)
+                
                 message.channel.send({ files: ["./Images/Eric Andre Unimpressed.gif"] })
                 break
             case 'yesss':
-                this.deleteTheMessage(message)
+                //this.deleteTheMessage(message)
                 message.channel.send({ files: ["./Images/Yesss.gif"] })
                 break
             case 'enjoythat':
