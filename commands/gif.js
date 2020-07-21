@@ -2,7 +2,7 @@
 module.exports = class gif {
     constructor(){
         this.name = 'gif'
-        this.alias = ['gif']
+        this.alias = ['g']
         this.usage = '!gif'
     }
     //run(client,message,ight){
@@ -120,7 +120,9 @@ module.exports = class gif {
 
     }
     deleteTheMessage(message){
+        let messageAuthor = message.member
         message.delete(message);
+        message.channel.send(messageAuthor + "responds with: ")
     }
 }
 /*
