@@ -9,7 +9,7 @@ module.exports = class gif {
     run(message,ight) { 
         switch (ight[1]){
             case 'eric':
-                this.deleteTheMessage(message)
+                deleteTheMessage(message)
                 message.channel.send({ files: ["./Images/Eric Andre Unimpressed.gif"] })
                 break
             case 'yesss':
