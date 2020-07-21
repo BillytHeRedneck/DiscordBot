@@ -120,9 +120,9 @@ module.exports = class gif {
 
     }
     deleteTheMessage(message){
-        let messageAuthor = message.member
+        let messageAuthor = message.member.id
         message.delete(message);
-        message.channel.send(messageAuthor + "responds with: ")
+        message.channel.send(messageAuthor + " responds with: ")
     }
 }
 /*
