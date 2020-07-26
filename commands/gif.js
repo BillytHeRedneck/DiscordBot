@@ -5,7 +5,7 @@ module.exports = class gif {
         this.alias = ['g']
         this.usage = '!gif'
     }
-    //run(client,message,ight)hi{
+    //run(client,message,ight)hino{
     run(message,ight) { 
         switch (ight[1]){
             case 'eric':
