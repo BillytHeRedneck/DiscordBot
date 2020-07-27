@@ -38,7 +38,7 @@ module.exports = class gif {
             case 'yesyes':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/M Bison Yes! Yes!.gif"] })
                 break
-            case 'spedcomp':
+            case 'badcomp':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Nice Competetion.gif"] })
                 break
             case 'tea':
