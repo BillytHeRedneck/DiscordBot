@@ -1,7 +1,7 @@
 module.exports = class time {
     constructor() {
         this.name = 'getboy'
-        this.alias = ['get']
+        this.alias = ['gb']
         this.usage = '!getboy'
     }
     run(message,ight) { 

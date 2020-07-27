@@ -1,6 +1,6 @@
 module.exports = class rnd {
     constructor() {
-        this.name = 'rnd'
+        this.name = 'randomnumber'
         this.alias = ['rnd']
         this.usage = '!rnd'
     }

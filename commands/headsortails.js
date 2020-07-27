@@ -1,6 +1,6 @@
 module.exports = class ht {
     constructor() {
-        this.name = 'ht'
+        this.name = 'headsortails'
         this.alias = ['ht']
         this.usage = '!ht'
     }

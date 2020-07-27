@@ -1,7 +1,7 @@
 module.exports = class setboy {
     constructor() {
         this.name = 'setboy'
-        this.alias = ['setboy']
+        this.alias = ['sb']
         this.usage = '!setboy'
     }
     run(message,ight) { 
