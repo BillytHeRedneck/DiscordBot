@@ -95,9 +95,12 @@ module.exports = class gif {
 
     }
     deleteTheMessage(message){
-        let messageAuthor = message.member.displayName
         message.delete(message);
-        return messageAuthor + " responds with: "
+        if(ight[2][1] == '@'){
+            let messageAuthor = message.member.displayName
+            return messageAuthor + " responds with: "
+        }
+        
     }
 }
 /*
