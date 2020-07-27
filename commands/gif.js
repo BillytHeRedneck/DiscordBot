@@ -7,9 +7,9 @@ module.exports = class gif {
     }
     //run(client,message,ight)hinoyesL{
     run(message,ight) { 
+        message.channel.send(message)
         switch (ight[1]){
             case 'eric':
-                
                 message.channel.send(this.deleteTheMessage(message), { files: ["./Images/Eric Andre Unimpressed.gif"] })
                 break
             case 'yesss':
@@ -96,10 +96,10 @@ module.exports = class gif {
     }
     deleteTheMessage(message){
         message.delete(message);
-        if(ight[2][1] == '@'){
+        //if(ight[2][1] == '@'){
             let messageAuthor = message.member.displayName
             return messageAuthor + " responds with: "
-        }
+        //}
         
     }
 }
