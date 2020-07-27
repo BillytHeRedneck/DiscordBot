@@ -95,7 +95,7 @@ module.exports = class gif {
     }
     deleteTheMessage(message, ight){
         message.delete(message);
-        if(ight[2][1] == '@'){
+        if(ight[2] != undefined && ight[2][1] == '@'){
             let messageAuthor = message.member.displayName
             return messageAuthor + " responds with: "
         }
