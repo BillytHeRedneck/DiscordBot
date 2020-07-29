@@ -10,7 +10,7 @@ module.exports = class weather{
     run (message, ight){
         axios
             .get(
-                `http://api.openweathermap.org/data/2.5/weather?zip=20871,us&APPID=3815da4ffe5daff0ce55d468a7b30fed`
+                `http://api.openweathermap.org/data/2.5/weather?zip=23114,us&APPID=3815da4ffe5daff0ce55d468a7b30fed`
             )
             .then(response => {
                 let apiData = response;
@@ -20,7 +20,7 @@ module.exports = class weather{
                 const currentForcast = apiData.data.weather[0].main
                 let humidity = apiData.data.main.humidity;
                 let wind = apiData.data.wind.speed;
-                let cityName = 'Clarksburg'
+                let cityName = apiData.data.name
                 let country = apiData.data.sys.country
                 let pressure = apiData.data.main.pressure;
                 let cloudness = apiData.data.weather[0].description;
@@ -38,7 +38,7 @@ module.exports = class weather{
                 message.channel.send({embed: {
                     color: '#0099ff',
                     author: {
-                        name:'HELLLLLOOOO MARYLANDERS'
+                        name:'HELLLLLOOOO VIRGINIANS'
                     },
                     title: `Location: ${cityName}, ${country}.`,
                     fields: [{
