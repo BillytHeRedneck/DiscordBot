@@ -44,7 +44,7 @@ module.exports = class weather{
                     fields: [{
                         name: `Current: ${currentTemp}\u00B0F`,
                         value:`
-                          ${weatherPics[currentForcast]}Forecast: ${currentForcast}, ${apiData.data.weather[0].description}
+                          ${icon}Forecast: ${currentForcast}, ${apiData.data.weather[0].description}
                           :small_red_triangle: High: ${maxTemp}\u00B0F
                           :small_red_triangle_down: Low: ${minTemp}\u00B0F
                           :hot_face: Humidity: ${humidity}%
