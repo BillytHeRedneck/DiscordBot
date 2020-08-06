@@ -1,4 +1,4 @@
-module.exports = class time {
+module.exports = class dice {
     constructor() {
         this.name = 'dice'
         this.alias = ['d']

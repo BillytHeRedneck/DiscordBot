@@ -1,4 +1,4 @@
-module.exports = class gif {
+module.exports = class startgame {
     constructor(){
         this.name = 'startgame'
         this.alias = ['sg']

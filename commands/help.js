@@ -1,4 +1,4 @@
-module.exports = class time {
+module.exports = class help {
     constructor() {
         this.name = 'help'
         this.alias = ['help']
