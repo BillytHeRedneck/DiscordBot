@@ -1,4 +1,3 @@
-
 module.exports = class gif {
     constructor(){
         this.name = 'gif'
