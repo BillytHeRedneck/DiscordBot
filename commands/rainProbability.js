@@ -1,9 +1,9 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-module.exports = class testing {
+module.exports = class rainProbability {
     constructor() {
-        this.name = 'testing'
-        this.alias = ['testing']
-        this.usage = '!testing'
+        this.name = 'Show me the weather!!'
+        this.alias = ['!rain']
+        this.usage = 'Show me the weather!!'
     }
     //run(client,message,ight)hinoyesLW{
     run(message, ight) {
@@ -41,7 +41,7 @@ module.exports = class testing {
         });
 
 
-        xhr.open("GET", "https://api.climacell.co/v3/weather/forecast/hourly?lat=37.5059814&lon=-77.6491578&unit_system=si&start_time=now&end_time=2020-08-07&fields=precipitation_probability&apikey=xJT1FBEW1QtGpWyCZqQptELe81osYG5M");
+        xhr.open("GET", "https://api.climacell.co/v3/weather/forecast/hourly?lat=37.5059814&lon=-77.6491578&unit_system=si&start_time=now&end_time=2020-08-09&fields=precipitation_probability&apikey=xJT1FBEW1QtGpWyCZqQptELe81osYG5M");
         xhr.send(data);
 
     }
