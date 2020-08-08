@@ -13,7 +13,7 @@ const CH = new CommandHandler({
 })
 let meme = 0;
 let dailyMeme = 0
-let dailyWeather = "Show me the weather!!"
+let dailyWeather = "!testing Show me the weather!!"
 global.lastBoy = null
 global.muted = false
 const client = new Client();
@@ -52,7 +52,7 @@ client.on('ready', () => {
         dailyMeme == 0
     })
 
-    var checking = schedule.scheduleJob("28 19 * * *", function () {
+    var checking = schedule.scheduleJob("33 19 * * *", function () {
         channel1.send(dailyWeather)
         /*
         channel1.send("!testing")
@@ -108,7 +108,6 @@ client.on('message', async message => {
     let ight = msg.split(" ")
     let command123 = ight[0]
     let cmd = CH.getCommand(command123)
-    message.channel.send(message + " " + ight)
     try {
         cmd.run(message, ight);
     } catch (error) {

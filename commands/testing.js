@@ -1,9 +1,9 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-module.exports = class rainProbability {
+module.exports = class testing {
     constructor() {
-        this.name = 'Show me the weather!!'
-        this.alias = ['!rain']
-        this.usage = 'Show me the weather!!'
+        this.name = 'testing'
+        this.alias = ['testing']
+        this.usage = '!testing'
     }
     //run(client,message,ight)hinoyesLW{
     run(message, ight) {
