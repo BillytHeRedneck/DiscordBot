@@ -54,26 +54,7 @@ client.on('ready', () => {
 
     var checking = schedule.scheduleJob("38 0 * * *", function () {
         channel1.send(dailyWeather)
-        /*
-        channel1.send("!testing")
-        client.on('message', async message => {
-            let msg = message.content.toLowerCase()
-            let ight = msg.split(" ")
-            let command123 = ight[0]
-            let cmd = CH.getCommand(command123)
-            try {
-                cmd.run(message, ight);
-            } catch (error) {
-                console.error(error);
-                channel1.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.");
-                channel1.send('Resetting...')
-                .then(message => client.destroy())
-                
-            }
         
-        })
-        //channel1.send("!eric")
-        */
     })
 
 })

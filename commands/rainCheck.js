@@ -56,8 +56,8 @@ module.exports = class rainCheck {
             }
         });
 
-
-        xhr.open("GET", `https://api.climacell.co/v3/weather/forecast/hourly?lat=37.5059814&lon=-77.6491578&unit_system=si&start_time=now&end_time=${UTCtomorrow}&fields=precipitation_probability&apikey=xJT1FBEW1QtGpWyCZqQptELe81osYG5M`);
+        //xhr.open("GET", `https://api.climacell.co/v3/weather/forecast/hourly?lat=37.5059814&lon=-77.6491578&unit_system=us&start_time=now&end_time=${UTCtomorrow}&fields=temp%2Cfeels_like%2Chumidity%2Cwind_speed%2Cprecipitation_probability%2Cweather_code&apikey=xJT1FBEW1QtGpWyCZqQptELe81osYG5M`);
+        xhr.open("GET", `https://api.climacell.co/v3/weather/forecast/hourly?lat=37.5059814&lon=-77.6491578&unit_system=us&start_time=now&end_time=${UTCtomorrow}&fields=precipitation_probability&apikey=xJT1FBEW1QtGpWyCZqQptELe81osYG5M`);
         xhr.send(data);
 
     }
