@@ -37,9 +37,7 @@ module.exports = class hourlyweather {
             message.channel.send(`weatherCode is ${weatherCode}`)
         }, 5000)
         
-*/
-
-        
+        */
 
     }
     deleteTheMessage(message){
@@ -101,7 +99,6 @@ module.exports = class hourlyweather {
 
                 }
                 return messageOnlyValue
-                //message.channel.send(`the temp array is: ${messageOnlyValue}`)
 
                 
             }
