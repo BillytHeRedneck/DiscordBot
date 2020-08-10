@@ -85,7 +85,7 @@ client.on('message', async message => {
             return
         }
 
-        
+        /*
         let msg = message.content.toLowerCase()
         let ight = msg.split(" ")
         let command123 = ight[0]
@@ -96,6 +96,7 @@ client.on('message', async message => {
             console.error(error);
             message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.");
         }
+        */
     
 });
 
