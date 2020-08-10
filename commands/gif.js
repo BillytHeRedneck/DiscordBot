@@ -11,7 +11,6 @@ module.exports = class gif {
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Eric Andre Unimpressed.gif"] })
                 break
             case 'yesss':
-                message.channel.send("IF THIS MESSAGE SHOWS, THE PROGRAM IS BEING UPDATED BUT GITHUB")
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Yesss.gif"] })
                 break
             case 'enjoythat':
