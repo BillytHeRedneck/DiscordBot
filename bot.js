@@ -76,7 +76,8 @@ client.on('message', async message => {
         }
         return
     }
-    if (!(message.author.bot && message.content == dailyWeather)) {
+    
+        //console.log(!(message.author.bot && message.content == dailyWeather))
         if (message.author.bot) return;
         if (!message.content.startsWith(prefix)) return;
         if (muted) {
@@ -84,7 +85,7 @@ client.on('message', async message => {
             return
         }
 
-
+        
         let msg = message.content.toLowerCase()
         let ight = msg.split(" ")
         let command123 = ight[0]
@@ -95,7 +96,7 @@ client.on('message', async message => {
             console.error(error);
             message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.");
         }
-    }
+    
 });
 
 
