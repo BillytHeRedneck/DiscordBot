@@ -22,7 +22,7 @@ module.exports = class hourlyweather {
             singleDigitDay = "0"
         }
         let UTCtomorrow = `${tomorrow.getFullYear()}-${singleDigitMonth}${tomorrow.getMonth()+1}-${singleDigitDay}${tomorrow.getDate()}`
-        
+        /*
         this.rainProbability(message, UTCtomorrow)
         let temp = this.temp(UTCtomorrow)
         let feelsLike = this.feelsLike(UTCtomorrow)
@@ -37,7 +37,7 @@ module.exports = class hourlyweather {
             message.channel.send(`weatherCode is ${weatherCode}`)
         }, 5000)
         
-
+*/
 
         
 
