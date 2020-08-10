@@ -8,9 +8,23 @@ module.exports = class rainCheck {
     //run(client,message,ight)hinoyesLW{
     run(message, ight) {
 
-        var data = null;
+        this.deleteTheMessage(message,ight)
 
+        var data = null;
         var xhr = new XMLHttpRequest();
+
+        let singleDigitDay = ""
+        let singleDigitMonth = ""
+        const today = new Date()
+        const tomorrow = new Date(today)
+        tomorrow.setDate(tomorrow.getDate() + 1)
+        if (tomorrow.getMonth()+1 - 10 < 0){
+            singleDigitMonth = "0"
+        }
+        if (tomorrow.getDate() - 10 < 0){
+            singleDigitDay = "0"
+        }
+        let UTCtomorrow = `${tomorrow.getFullYear()}-${singleDigitMonth}${tomorrow.getMonth()+1}-${singleDigitDay}${tomorrow.getDate()}`
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
@@ -33,7 +47,7 @@ module.exports = class rainCheck {
                 }
                 //message.channel.send(messageOnlyValue)
 
-                message.channel.send("The highestRainProbability is " + highestRainProbability)
+                message.channel.send("The highestRainProbability is " + highestRainProbability + "%")
                 if (highestRainProbability >= 30) {
                     message.channel.send("It might rain today, be cautious")
                 } else {
@@ -43,8 +57,12 @@ module.exports = class rainCheck {
         });
 
 
-        xhr.open("GET", "https://api.climacell.co/v3/weather/forecast/hourly?lat=37.5059814&lon=-77.6491578&unit_system=si&start_time=now&end_time=2020-08-11T17:00:00.000&fields=precipitation_probability&apikey=xJT1FBEW1QtGpWyCZqQptELe81osYG5M");
+        xhr.open("GET", `https://api.climacell.co/v3/weather/forecast/hourly?lat=37.5059814&lon=-77.6491578&unit_system=si&start_time=now&end_time=${UTCtomorrow}&fields=precipitation_probability&apikey=xJT1FBEW1QtGpWyCZqQptELe81osYG5M`);
         xhr.send(data);
 
+    }
+    deleteTheMessage(message, ight){
+        message.delete(message);
+        
     }
 }
