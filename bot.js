@@ -103,43 +103,4 @@ client.on('message', async message => {
 
 client.login(token);
 
-/*
-scheduleJob():
-hours -> real life time
-4->0
-5->1
-6->2
-7->3
-8->4
-9->5
-10->6
-11->7
-12->8
-13->9
-14->10
-15->11
-16->12
-17->13
-18->14
-19->15
-20->16
-21->17
-22->18
-23->19
-0->20
-1->21
-2->22
-3->23
 
-Day -> Day
-5-> Friday
-6-> Saturday
-1-> Sunday
-1-> Monday
-2-> Tuesday
-
-
-
-//const client = new Discord.Client();
-
-*/
