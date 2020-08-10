@@ -1,4 +1,3 @@
-const testing = require('/Users/billytheredneck/Test/commands/testing.js');
 module.exports = class gif {
     constructor(){
         this.name = 'gif'
