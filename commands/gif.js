@@ -4,7 +4,7 @@ module.exports = class gif {
         this.alias = ['g']
         this.usage = '!gif'
     }
-    //run(client,message,ight)hinoyesL{
+    //run(client,message,ight)hinoyesLW{
     run(message,ight) { 
         switch (ight[1]){
             case 'eric':
