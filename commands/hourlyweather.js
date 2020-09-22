@@ -14,7 +14,7 @@ module.exports = class hourlyweather {
 
         let singleDigitDay = ""
         let singleDigitMonth = ""
-        const today = new Date("August 12, 2020 07:00 EST")
+        const today = new Date()
         const tomorrow = new Date(today)
         tomorrow.setDate(tomorrow.getDate() + 1)
         if (tomorrow.getMonth() + 1 - 10 < 0) {

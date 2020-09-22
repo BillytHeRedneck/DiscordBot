@@ -88,6 +88,18 @@ module.exports = class gif {
             case 'byplead':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Baby Yoda Force.gif"] })
                 break    
+            case 'headpat':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Headpat!!!.gif"] })
+                break;
+            case 'dealwit':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Deal With It.gif"] })
+                break;
+            case 'kidyes':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Lil Kid YESSSS.gif"] })
+                break;
+            case 'hahano':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Decepticon Yeah No.gif"] })
+                break;
             default:
                 message.channel.send("I don't know that one. You either spelled it wrong" +
                 " or the coding monkey didn't put it in. You should tell him to put it in. PUT IT IN UMAR!")
