@@ -109,7 +109,9 @@ module.exports = class gif {
     }
     deleteTheMessage(message, ight){
         message.delete(message);
-        if(ight[2] != undefined && ight[2][1] == '@'){
+        if(ight[2] != undefined && ight[2][1] == '@' && ight[1] == 'headpat'){
+            return message.author.username + " gives " + ight[2] + " a headpat!"
+        } else if(ight[2] != undefined && ight[2][1] == '@'){
             return message.author.username + " responds to " + ight[2] + " with this gif! Zing!"
         }
         
