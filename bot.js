@@ -32,7 +32,7 @@ console.log(client.commands);
 client.on('ready', () => {
     console.log('Bot is logged in!')
 })
-
+/*
 //scheduled message for meme-a-day
 client.on('ready', () => {
 
@@ -58,7 +58,7 @@ client.on('ready', () => {
     })
 
 })
-
+*/
 client.on('message', async message => {
     /*
     688827517913530565
