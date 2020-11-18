@@ -115,7 +115,7 @@ module.exports = class gif {
         if(ight[2] != undefined && ight[2][1] == '@' && ight[1] == 'headpat'){
             return message.author.username + " gives " + ight[2] + " a headpat!"
         } else if (ight[2] != undefined && ight[2][1] == '@' && ight[1] == 'hug'){
-            return message.author.username + " gives " + ight[2] + " a hug!:ScoobyShaggyHug:"
+            return message.author.username + " gives " + ight[2] + " a hug! :ScoobyShaggyHug:"
         } else if(ight[2] != undefined && ight[2][1] == '@'){
             return message.author.username + " responds to " + ight[2] + " with this gif! Zing!"
         }
