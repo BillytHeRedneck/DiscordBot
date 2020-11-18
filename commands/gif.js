@@ -91,6 +91,9 @@ module.exports = class gif {
             case 'headpat':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Headpat!!!.gif"] })
                 break;
+            case 'hug':
+            message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Hug!!!.gif"] })
+            break;
             case 'dealwit':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Deal With It.gif"] })
                 break;
@@ -111,6 +114,8 @@ module.exports = class gif {
         message.delete(message);
         if(ight[2] != undefined && ight[2][1] == '@' && ight[1] == 'headpat'){
             return message.author.username + " gives " + ight[2] + " a headpat!"
+        } else if (ight[2] != undefined && ight[2][1] == '@' && ight[1] == 'hug'){
+            return message.author.username + " gives " + ight[2] + " a hug!:ScoobyShaggyHug:"
         } else if(ight[2] != undefined && ight[2][1] == '@'){
             return message.author.username + " responds to " + ight[2] + " with this gif! Zing!"
         }
