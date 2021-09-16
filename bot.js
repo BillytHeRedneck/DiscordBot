@@ -197,7 +197,8 @@ async function execute(message, serverQueue) {
       
     if (!serverQueue)
       return message.channel.send("There is no song that I could stop!");
-      
+    if (serverQueue.isEmpty())
+        return message.channel.send("There is no song that I could stop!");
     serverQueue.songs = [];
     serverQueue.connection.dispatcher.end();
   }
