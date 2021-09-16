@@ -4,14 +4,24 @@ module.exports = class startgame {
         this.alias = ['sg']
         this.usage = '!startgame'
     }
-    
     run(message,ight) { 
+        game = true
+        message.channel.send("ight is " + ight.split("@"))
+        curr_player = message.author.username;
+        player_1 = message.author.username;
+        player_2 = ight[1].username;
+        global.board = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ]
         message.channel.send(
-            "You will be X, I will be O. Refer to the game directions if Umar hasn't told you how to play\n" +
-            "I will be nice and let you go first\n"+
-            "*1*  |  *2*  |  *3*\n" +
-            "*4*  |  *5*  |  *6*\n" +
-            "*7*  |  *8*  |  *9*\n"
+                      "NEW VERSION\n" + 
+                      "__" + board[0][0] + " |  " + board[0][1] + "  | " + board[0][2] + "__\n" +
+                      "__" + board[1][0] + " |  " + board[1][1] + "  | " + board[1][2] + "__\n" +
+                      board[2][0] + " |  " + board[2][1] + "  | " + board[2][2]  
+                      
         )
+        
     }
 }
