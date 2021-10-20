@@ -5,7 +5,7 @@ module.exports = class startgame {
         this.usage = '!startgame'
     }
     run(message,ight) { 
-        game = true
+        //game = true
         message.channel.send("ight is " + ight.split("@"))
         curr_player = message.author.username;
         player_1 = message.author.username;
