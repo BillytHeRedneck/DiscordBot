@@ -112,7 +112,7 @@ module.exports = class gif {
             case 'critidk':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/critikal_idk.gif"] })
                 break;
-                
+
             default:
                 message.channel.send("I don't know that one. You either spelled it wrong" +
                 " or the coding monkey didn't put it in. You should tell him to put it in. PUT IT IN UMAR!")
@@ -133,7 +133,7 @@ module.exports = class gif {
     }
 }
 /* 
-module.exports = {
+module.exports = { test
 	name: 'gif',
 	description: 'Embed a gif!',
 	execute(message) {
