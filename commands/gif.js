@@ -92,8 +92,8 @@ module.exports = class gif {
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Headpat!!!.gif"] })
                 break;
             case 'hug':
-            message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Hug!!!.gif"] })
-            break;
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Hug!!!.gif"] })
+                break;
             case 'dealwit':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Deal With It.gif"] })
                 break;
@@ -102,6 +102,15 @@ module.exports = class gif {
                 break;
             case 'hahano':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Decepticon Yeah No.gif"] })
+                break;
+            case 'socceridk':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/soccer_shrug.gif"] })
+                break;
+            case 'joekek':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Angry_Joe-hanzeb_Kek.gif"] })
+                break;
+            case 'critidk':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/critikal_idk.gif"] })
                 break;
             default:
                 message.channel.send("I don't know that one. You either spelled it wrong" +

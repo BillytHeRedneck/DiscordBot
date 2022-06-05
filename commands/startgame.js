@@ -7,6 +7,9 @@ module.exports = class startgame {
     run(message,ight) { 
         //game = true
         message.channel.send("ight is " + ight)
+        message.channel.send("message is " + message)
+        message.channel.send("player_1 is " + player_1)
+        message.channel.send("player_2 is " + player_2)
         curr_player = message.author.username;
         player_1 = message.author.username;
         player_2 = ight[1].username;
