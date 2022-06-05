@@ -112,7 +112,15 @@ module.exports = class gif {
             case 'critidk':
                 message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/critikal_idk.gif"] })
                 break;
-
+            case 'bysigh':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/GroguSigh.gif"] })
+                break;
+            case 'bycon':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Grogu Confused.gif"] })
+                break;
+            case 'crwtf':
+                message.channel.send(this.deleteTheMessage(message,ight), { files: ["./Images/Ronaldo_lol_wtf.gif"] })
+                break;
             default:
                 message.channel.send("I don't know that one. You either spelled it wrong" +
                 " or the coding monkey didn't put it in. You should tell him to put it in. PUT IT IN UMAR!")
