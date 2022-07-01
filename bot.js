@@ -12,7 +12,7 @@ const CH = new CommandHandler({
     folder: __dirname + "/commands/",
     prefix: ['!']
 })
-let meme = 0;
+let meme = 0;  
 let dailyMeme = 0
 let dailyWeather = "!-raincheck"
 global.lastBoy = null
