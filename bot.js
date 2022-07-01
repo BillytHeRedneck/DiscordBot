@@ -63,6 +63,7 @@ client.on('ready', () => {
     })
 
 })
+hello
 */
 client.on('message', async message => {
     /*
