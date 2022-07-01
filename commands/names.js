@@ -11,6 +11,6 @@ module.exports = class names {
         "**Kuukua** :lizard:\n" +
         "**Luis** :shark:\n" +
         "**Mohamed** :koala: \n" +
-        "**Umar** :sloth:")
+        "**Umar** :sloth::shark:")
     }
 }
