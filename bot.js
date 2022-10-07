@@ -95,6 +95,7 @@ client.on('message', async message => {
         let ight = msg.split(" ")
         let command123 = ight[0]
         let cmd = CH.getCommand(command123)
+        /*
         if (game) {
             if (ight[0] != "!move" || message.author.username != curr_player) 
                 message.channel.send("You're a real funny guy...");
@@ -127,6 +128,7 @@ client.on('message', async message => {
             console.error(error);
             message.channel.send("Hmmmm, that's not a command. I'm just gonna pretend I didn't hear it.");
         }
+        */
     }    
     
 });
